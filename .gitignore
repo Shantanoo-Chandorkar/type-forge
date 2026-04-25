@@ -42,3 +42,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# data and data-creating scripts
+quotes-seed.py
+quotes.json
