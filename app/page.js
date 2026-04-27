@@ -19,6 +19,8 @@ export default function Home() {
     const [randomQuote, setRandomeQuote] = useState(null);
     const [timer, setTimer] = useState(15);
     const [difficulty, setDifficulty] = useState('easy');
+    const [userTyping, setUseTyping] = useState(null);
+
 
     useEffect(() => {
         setRandomeQuote(getRandomQuote(difficulty));
@@ -31,6 +33,11 @@ export default function Home() {
     const handleDifficultyChange = (e) => {
         setDifficulty(e.target.value);
     };
+
+    const handleTypingChange =(e) => {
+        setUseTyping(e.target.value);
+    }
+
     return (
         <div className="flex w-full m-auto justify-center items-center h-screen flex-col gap-4">
             <h1>{`Type Forge - Let's build this in a non-AI way.`}</h1>
@@ -77,6 +84,7 @@ export default function Home() {
                         className="w-full p-10 border border-gray-300 border-2"
                         id="type-input"
                         placeholder={randomQuote?.quote}
+                        onChange={handleTypingChange}
                     ></textarea>
                 </label>
             </div>
