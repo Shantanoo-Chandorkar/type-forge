@@ -1,10 +1,10 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import CharNode from '@/components/CharNode';
 import data from '../data/typing_quotes_categorized.json';
 
 const getRandomQuote = (difficulty) => {
     // const quoteKeys = Object.keys(data);
-
     // const randomQuoteKey = quoteKeys[Math.floor(Math.random() * quoteKeys.length)];
     const randomQuote = data[difficulty][Math.floor(Math.random() * data[difficulty].length)];
 
@@ -19,11 +19,13 @@ export default function Home() {
     const [randomQuote, setRandomeQuote] = useState(null);
     const [timer, setTimer] = useState(15);
     const [difficulty, setDifficulty] = useState('easy');
-    const [userTyping, setUseTyping] = useState(null);
+    const [userTyping, setUserTyping] = useState('');
 
+    const inputRef = useRef(null);
 
     useEffect(() => {
         setRandomeQuote(getRandomQuote(difficulty));
+        setUserTyping('');
     }, [difficulty]);
 
     const handleTimerChange = (e) => {
@@ -34,9 +36,15 @@ export default function Home() {
         setDifficulty(e.target.value);
     };
 
-    const handleTypingChange =(e) => {
-        setUseTyping(e.target.value);
-    }
+    const handleTypingChange = (e) => {
+        setUserTyping(e.target.value);
+    };
+
+    if (!randomQuote) return null;
+
+    const quoteString = randomQuote.quote;
+    const quoteArray = quoteString.split('');
+    const userTypingArray = userTyping.split('');
 
     return (
         <div className="flex w-full m-auto justify-center items-center h-screen flex-col gap-4">
@@ -52,10 +60,10 @@ export default function Home() {
                                 value={timer}
                                 id="timer"
                             >
-                                <option value="">Select the timer value</option>
-                                {TIMER_VALUES.map((timer, index) => (
-                                    <option key={index} value={timer}>
-                                        {timer}
+                                {/* <option value="">Select the timer value</option> */}
+                                {TIMER_VALUES.map((timeVal, index) => (
+                                    <option key={index} value={timeVal}>
+                                        {timeVal}
                                     </option>
                                 ))}
                             </select>
@@ -68,25 +76,48 @@ export default function Home() {
                                 id="difficulty"
                                 className="border border-gray-300 border-2"
                                 onChange={handleDifficultyChange}
+                                value={difficulty}
                             >
                                 {/* <option value=''>Select the difficulty value</option> */}
-                                {DIFFICULTY_LEVELS.map((difficulty, index) => (
-                                    <option key={index} value={difficulty}>
-                                        {difficulty}
+                                {DIFFICULTY_LEVELS.map((level, index) => (
+                                    <option key={index} value={level}>
+                                        {level}
                                     </option>
                                 ))}
                             </select>
                         </label>
                     </>
                 </div>
-                <label htmlFor="type-input" className="w-full text-left">
+                <div
+                    className="relative w-full p-10 border border-gray-300 border-2 text-left cursor-text bg-white"
+                    onClick={() => inputRef.current?.focus()}
+                >
+                    {/* Render using CharNode */}
+                    <div className="z-10 relative pointer-events-none break-words">
+                        {quoteArray.map((char, index) => {
+                            let status = 'pending';
+
+                            // Tri-state Logic
+                            if (index < userTypingArray.length) {
+                                status = userTypingArray[index] === char ? 'correct' : 'incorrect';
+                            }
+
+                            return <CharNode key={index} char={char} status={status} />;
+                        })}
+                    </div>
+                    {/* Capture using textarea */}
                     <textarea
-                        className="w-full p-10 border border-gray-300 border-2"
+                        ref={inputRef}
+                        className="absolute top-0 left-0 w-full h-full opacity-0 resize-none z-0"
                         id="type-input"
-                        placeholder={randomQuote?.quote}
                         onChange={handleTypingChange}
+                        value={userTyping}
+                        autoComplete="off"
+                        autoCapitalize="off"
+                        autoCorrect="off"
+                        spellCheck="false"
                     ></textarea>
-                </label>
+                </div>
             </div>
         </div>
     );
