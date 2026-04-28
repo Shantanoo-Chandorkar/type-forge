@@ -27,6 +27,11 @@ const TypingArea = memo(function TypingArea({
     handleTypingChange,
     resetTest,
 }) {
+    // Focus the hidden textarea on mount so the user can start typing immediately.
+    useEffect(() => {
+        inputRef.current?.focus();
+    }, [inputRef]);
+
     // Tab key resets the test from anywhere on the page.
     useEffect(() => {
         const handleKeyDown = (e) => {
