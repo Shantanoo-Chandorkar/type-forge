@@ -73,6 +73,7 @@ export default function Home() {
         setContentMode(newMode);
         setDifficulty(newDiff);
         setCustomText(null);
+        testState.resetTest();
     }
 
     if (!testState.quote) return null;
