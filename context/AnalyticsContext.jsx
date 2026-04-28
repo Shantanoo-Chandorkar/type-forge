@@ -4,7 +4,7 @@ import { createContext, useContext, useState, useEffect, startTransition } from 
 const STORAGE_KEY = 'tf-attempts';
 const KEY_ERRORS_KEY = 'tf-key-errors';
 const PERSONAL_BEST_KEY = 'tf-personal-best';
-const FIFO_CAP = 50;
+const FIFO_CAP = 20;
 
 const AnalyticsContext = createContext(null);
 
