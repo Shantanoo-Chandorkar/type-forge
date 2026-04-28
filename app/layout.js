@@ -1,4 +1,5 @@
 import { Share_Tech_Mono, JetBrains_Mono, Fira_Code, Courier_Prime } from 'next/font/google';
+import { AnalyticsProvider } from '@/context/AnalyticsContext';
 import { SettingsProvider } from '@/context/SettingsContext';
 import Header from '@/components/Header';
 import './globals.css';
@@ -44,10 +45,12 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" className={`${fontVars} h-full antialiased`}>
             <body className="min-h-full flex flex-col">
-                <SettingsProvider>
-                    <Header />
-                    {children}
-                </SettingsProvider>
+                <AnalyticsProvider>
+                    <SettingsProvider>
+                        <Header />
+                        {children}
+                    </SettingsProvider>
+                </AnalyticsProvider>
             </body>
         </html>
     );
