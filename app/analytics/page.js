@@ -9,6 +9,8 @@ import {
     ResponsiveContainer,
 } from 'recharts';
 import { useAnalytics } from '@/context/AnalyticsContext';
+import { useSettings } from '@/context/SettingsContext';
+import { getFontSizeClasses } from '@/utils/fontSizeClasses';
 
 /**
  * Analytics page displaying attempt history and WPM trend for the current session.
@@ -16,11 +18,13 @@ import { useAnalytics } from '@/context/AnalyticsContext';
  */
 export default function AnalyticsPage() {
     const { attempts, clearAttempts } = useAnalytics();
+    const { fontSizeId } = useSettings();
+    const sizes = getFontSizeClasses(fontSizeId);
 
     if (attempts.length === 0) {
         return (
             <main className="max-w-4xl mx-auto px-12 w-full pb-16 font-mono pt-16">
-                <p className="text-[#aaaaaa] text-sm">
+                <p className={`text-[#aaaaaa] ${sizes.data}`}>
                     no attempts yet, run a test first
                 </p>
             </main>
@@ -53,7 +57,7 @@ export default function AnalyticsPage() {
                     { label: 'avg accuracy', value: `${avgAccuracy}%` },
                 ].map(({ label, value }) => (
                     <div key={label}>
-                        <div className="text-[#aaaaaa] text-xs mb-1">{label}</div>
+                        <div className={`text-[#aaaaaa] ${sizes.label} mb-1`}>{label}</div>
                         <div className="text-4xl font-bold text-[#2d2d2d]">{value}</div>
                     </div>
                 ))}
@@ -106,9 +110,12 @@ export default function AnalyticsPage() {
             </div>
 
             {/* Attempts table */}
-            <table className="w-full text-sm border-collapse mb-8">
+            <p className={`text-[#aaaaaa] ${sizes.label} mb-3`}>
+                showing last 15 attempts this session
+            </p>
+            <table className="w-full border-collapse mb-8">
                 <thead>
-                    <tr className="text-[#aaaaaa] text-left border-b border-[#d0d0d0]">
+                    <tr className={`text-[#aaaaaa] ${sizes.label} text-left border-b border-[#d0d0d0]`}>
                         {['#', 'difficulty', 'timer', 'wpm', 'accuracy', 'consistency', 'time'].map(
                             (h) => (
                                 <th key={h} className="pb-2 pr-6 font-normal">
@@ -122,7 +129,7 @@ export default function AnalyticsPage() {
                     {attempts.map((a, i) => (
                         <tr
                             key={a.id}
-                            className="border-b border-[#ebebeb] text-[#2d2d2d]"
+                            className={`border-b border-[#ebebeb] text-[#2d2d2d] ${sizes.data}`}
                             title={formatTime(a.timestamp)}
                         >
                             <td className="py-2 pr-6 text-[#aaaaaa]">{i + 1}</td>
@@ -140,7 +147,7 @@ export default function AnalyticsPage() {
             {/* Clear button */}
             <button
                 onClick={clearAttempts}
-                className="text-sm text-[#aaaaaa] border border-[#d0d0d0] px-4 py-2 hover:border-[#c94040] hover:text-[#c94040] transition-colors"
+                className={`${sizes.data} text-[#aaaaaa] border border-[#d0d0d0] px-4 py-2 hover:border-[#c94040] hover:text-[#c94040] transition-colors`}
             >
                 clear session
             </button>

@@ -33,7 +33,8 @@ export function AnalyticsProvider({ children }) {
      */
     function addAttempt(attempt) {
         setAttempts((prev) => {
-            const next = [...prev, attempt];
+            // FIFO cap: keep only the most recent 15 attempts.
+            const next = [...prev, attempt].slice(-15);
             try {
                 sessionStorage.setItem(STORAGE_KEY, JSON.stringify(next));
             } catch {
