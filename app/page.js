@@ -147,7 +147,7 @@ export default function Home() {
                     <>
                         <p>
                             Time Left:{' '}
-                            {timeLeft > 0 ? <span>{timeLeft}</span> : <span>{`--|--`}</span>}
+                            {timeLeft > 0 ? <span>{timeLeft}s</span> : <span>{`--|--`}</span>}
                         </p>
                     </>
                     <>
