@@ -1,0 +1,134 @@
+{
+    "easy": [
+        { "quote": "Hello, world. How are you today?", "author": "punctuation" },
+        { "quote": "She said, yes. He replied, no.", "author": "punctuation" },
+        { "quote": "The dog ran fast. It was tired.", "author": "punctuation" },
+        { "quote": "Wait, I forgot my keys again.", "author": "punctuation" },
+        { "quote": "Open the door, please. Thank you.", "author": "punctuation" },
+        { "quote": "He woke up early. She slept in.", "author": "punctuation" },
+        { "quote": "Stop, look, and listen carefully.", "author": "punctuation" },
+        { "quote": "Buy milk, eggs, and bread.", "author": "punctuation" },
+        { "quote": "It was cold, wet, and dark.", "author": "punctuation" },
+        { "quote": "No, I disagree. Yes, you are right.", "author": "punctuation" },
+        { "quote": "The sun rose. The birds sang.", "author": "punctuation" },
+        { "quote": "Read the book, then write a summary.", "author": "punctuation" },
+        { "quote": "She smiled, waved, and walked away.", "author": "punctuation" },
+        { "quote": "Be kind, be honest, be patient.", "author": "punctuation" },
+        { "quote": "Pack your bags. We leave at noon.", "author": "punctuation" },
+        { "quote": "Turn left, go straight, then stop.", "author": "punctuation" },
+        { "quote": "Take a breath. Start again.", "author": "punctuation" },
+        { "quote": "He called, but she did not answer.", "author": "punctuation" },
+        { "quote": "Cook, clean, and rest. Repeat.", "author": "punctuation" },
+        { "quote": "First, try. Then, fail. Then, learn.", "author": "punctuation" }
+    ],
+    "medium": [
+        { "quote": "It's a great day; let's make the most of it.", "author": "punctuation" },
+        { "quote": "She doesn't know yet; I'll tell her tomorrow.", "author": "punctuation" },
+        { "quote": "The report, which was due Monday, isn't ready.", "author": "punctuation" },
+        { "quote": "He'd been waiting for hours; she'd forgotten.", "author": "punctuation" },
+        {
+            "quote": "First, gather your materials; second, read the instructions.",
+            "author": "punctuation"
+        },
+        { "quote": "It's not what you say; it's how you say it.", "author": "punctuation" },
+        { "quote": "The team won't meet today; it's been rescheduled.", "author": "punctuation" },
+        { "quote": "She can't decide; there are too many good options.", "author": "punctuation" },
+        { "quote": "Plan A failed; therefore, we'll try Plan B.", "author": "punctuation" },
+        { "quote": "He didn't call; however, he sent an email.", "author": "punctuation" },
+        { "quote": "There's one rule: don't give up when it's hard.", "author": "punctuation" },
+        { "quote": "We'll meet at 3:00 p.m.; don't be late.", "author": "punctuation" },
+        { "quote": "The files, once deleted, can't be recovered easily.", "author": "punctuation" },
+        {
+            "quote": "She's been working here since 2019; it's her fifth year.",
+            "author": "punctuation"
+        },
+        { "quote": "We don't always get what we want; that's life.", "author": "punctuation" },
+        { "quote": "I've seen this before; it's a common mistake.", "author": "punctuation" },
+        { "quote": "They won't stop; they're too committed to quit.", "author": "punctuation" },
+        { "quote": "He's late; it's not the first time, unfortunately.", "author": "punctuation" },
+        { "quote": "It's a long journey; we've only just begun.", "author": "punctuation" },
+        {
+            "quote": "Don't overthink it; sometimes the first answer's right.",
+            "author": "punctuation"
+        }
+    ],
+    "hard": [
+        {
+            "quote": "Items 1, 2, & 3 were priced at $4.99, $12.50, and $7.00 respectively.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "The contract (dated 03/15/2023) stipulates a 30-day notice period.",
+            "author": "punctuation"
+        },
+        { "quote": "He couldn't decide: was it A, B, C, or all three?", "author": "punctuation" },
+        {
+            "quote": "She'd earned $85,000/year -- a 12% raise -- since Q3 2022.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "Note: Items #4 and #7 require 48-72 hours' processing time.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "The ratio was 3:1; costs rose 18%, margins fell 6.5%.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "Call us at 1-800-555-0199 (ext. 42) Mon.-Fri., 9:00 a.m.-5:00 p.m.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "Ref #A-2045: priority 1 items (flagged *urgent*) must ship by 12/31.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "The Q4 report showed: revenue +$2.1M, EBITDA +15%, churn -3%.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "She asked, \"Can't you see? It's right there!\" -- pointing at the screen.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "Formula: profit = (revenue - costs) * (1 - tax_rate / 100).",
+            "author": "punctuation"
+        },
+        {
+            "quote": "Version 2.0.1 (released 2024-07-04) fixes CVE-2024-1337.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "Keys: Ctrl+C, Ctrl+V, Alt+F4, and Win+L are the most-used shortcuts.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "The file: /home/user/.config/app.conf was last modified on 11/02/2023.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "Rate: $150/hr; min. 2-hr block; 10% discount for 10+ hr/week.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "Error 404: resource 'users/42/profile?v=2' not found (GET /api/v1/).",
+            "author": "punctuation"
+        },
+        {
+            "quote": "The 80/20 rule: 80% of effects come from 20% of causes -- always.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "Set env vars: API_KEY='abc123', PORT=8080, DEBUG=false, TIMEOUT=30s.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "Chapter 3, Section 2.4 (pp. 87-91): see Figures 3a, 3b, and Table 4.",
+            "author": "punctuation"
+        },
+        {
+            "quote": "Coordinates: 40.7128 N, 74.0060 W -- elevation: 33 ft. above sea level.",
+            "author": "punctuation"
+        }
+    ]
+}

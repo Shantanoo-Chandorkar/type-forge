@@ -1,0 +1,256 @@
+{
+    "easy": [
+        { "quote": "the sun is bright today", "author": "common words" },
+        { "quote": "she went to the store", "author": "common words" },
+        { "quote": "I like to read books", "author": "common words" },
+        { "quote": "he can see the door", "author": "common words" },
+        { "quote": "we will find the way", "author": "common words" },
+        { "quote": "the big dog ran home", "author": "common words" },
+        { "quote": "can you help me now", "author": "common words" },
+        { "quote": "they went down the road", "author": "common words" },
+        { "quote": "look at the blue sky", "author": "common words" },
+        { "quote": "my name is not here", "author": "common words" },
+        { "quote": "we sit by the water", "author": "common words" },
+        { "quote": "the time is up now", "author": "common words" },
+        { "quote": "I did not get it", "author": "common words" },
+        { "quote": "she has a red book", "author": "common words" },
+        { "quote": "the old man sat down", "author": "common words" },
+        { "quote": "put it on the table", "author": "common words" },
+        { "quote": "they could not go back", "author": "common words" },
+        { "quote": "I see the light now", "author": "common words" },
+        { "quote": "we made a new plan", "author": "common words" },
+        { "quote": "the cat is on top", "author": "common words" },
+        { "quote": "do you know the way", "author": "common words" },
+        { "quote": "he said it was fine", "author": "common words" },
+        { "quote": "take the first one you see", "author": "common words" },
+        { "quote": "she will come back soon", "author": "common words" },
+        { "quote": "the boy ran to the hill", "author": "common words" },
+        { "quote": "I want to go out", "author": "common words" },
+        { "quote": "they had a long day", "author": "common words" },
+        { "quote": "we got here on time", "author": "common words" },
+        { "quote": "the rain will stop soon", "author": "common words" },
+        { "quote": "he does not know her", "author": "common words" },
+        { "quote": "make it work right now", "author": "common words" },
+        { "quote": "the two of us will go", "author": "common words" },
+        { "quote": "I am not sure about it", "author": "common words" },
+        { "quote": "they see the big tree", "author": "common words" },
+        { "quote": "she got a new job", "author": "common words" },
+        { "quote": "we need more time here", "author": "common words" },
+        { "quote": "the road is very long", "author": "common words" },
+        { "quote": "he put it in the box", "author": "common words" },
+        { "quote": "look at what you did", "author": "common words" },
+        { "quote": "I can not find my key", "author": "common words" },
+        { "quote": "they will be back soon", "author": "common words" },
+        { "quote": "the wind is cold today", "author": "common words" },
+        { "quote": "we all sat in a row", "author": "common words" },
+        { "quote": "she likes the warm sun", "author": "common words" },
+        { "quote": "he did the work fast", "author": "common words" },
+        { "quote": "no one came to help", "author": "common words" },
+        { "quote": "the water runs very fast", "author": "common words" },
+        { "quote": "I think we should go", "author": "common words" },
+        { "quote": "they made it in time", "author": "common words" },
+        { "quote": "the light went out late", "author": "common words" }
+    ],
+    "medium": [
+        {
+            "quote": "the first thing you need to do is take a deep breath",
+            "author": "common words"
+        },
+        {
+            "quote": "people often find it hard to focus when they are tired",
+            "author": "common words"
+        },
+        {
+            "quote": "you should always make sure to check your work before you send it",
+            "author": "common words"
+        },
+        {
+            "quote": "the most important part of any job is showing up every day",
+            "author": "common words"
+        },
+        {
+            "quote": "good things take time and you have to be willing to wait",
+            "author": "common words"
+        },
+        {
+            "quote": "she decided to take a long walk before the day was over",
+            "author": "common words"
+        },
+        {
+            "quote": "we found out that the best way to learn is by doing",
+            "author": "common words"
+        },
+        {
+            "quote": "he wanted to start a new project but did not know where to begin",
+            "author": "common words"
+        },
+        {
+            "quote": "the whole group agreed that it was time to move on to something new",
+            "author": "common words"
+        },
+        {
+            "quote": "every morning she would sit by the window and watch the world go by",
+            "author": "common words"
+        },
+        {
+            "quote": "there is no better feeling than finishing a hard task after a long day",
+            "author": "common words"
+        },
+        {
+            "quote": "they decided to take the long road home even though it was getting late",
+            "author": "common words"
+        },
+        {
+            "quote": "if you want to get better at something you have to practice every day",
+            "author": "common words"
+        },
+        {
+            "quote": "the city was full of people going about their lives without a care in the world",
+            "author": "common words"
+        },
+        {
+            "quote": "sometimes the best thing you can do is step back and look at the big picture",
+            "author": "common words"
+        },
+        {
+            "quote": "we all have something to offer if we are willing to put in the work",
+            "author": "common words"
+        },
+        {
+            "quote": "the old bridge over the river had been there for more than a hundred years",
+            "author": "common words"
+        },
+        {
+            "quote": "learning how to manage your time well is one of the most valuable skills you can develop",
+            "author": "common words"
+        },
+        {
+            "quote": "she picked up the book she had been meaning to read for months and finally started it",
+            "author": "common words"
+        },
+        {
+            "quote": "a small change in your daily routine can make a big difference over time",
+            "author": "common words"
+        },
+        {
+            "quote": "he had always wanted to learn how to play the guitar but never found the time",
+            "author": "common words"
+        },
+        {
+            "quote": "the team worked together to find a solution that everyone could agree on",
+            "author": "common words"
+        },
+        {
+            "quote": "no matter how hard things get you have to keep moving forward one step at a time",
+            "author": "common words"
+        },
+        {
+            "quote": "she told him that the most important thing was to be honest about how he felt",
+            "author": "common words"
+        },
+        {
+            "quote": "they had been working on the plan for weeks and were finally ready to present it",
+            "author": "common words"
+        },
+        {
+            "quote": "the children played outside until it was too dark to see anything at all",
+            "author": "common words"
+        },
+        {
+            "quote": "the best ideas often come to you when you are not even trying to think of them",
+            "author": "common words"
+        },
+        {
+            "quote": "he made a list of all the things he needed to do and started with the hardest one first",
+            "author": "common words"
+        },
+        {
+            "quote": "there is something very satisfying about completing a project you have worked hard on",
+            "author": "common words"
+        },
+        {
+            "quote": "we spent the whole afternoon trying to figure out the best way to get there",
+            "author": "common words"
+        },
+        {
+            "quote": "the key to doing well at anything is to stay focused and not give up",
+            "author": "common words"
+        },
+        {
+            "quote": "she realized that she had been spending too much time on things that did not matter",
+            "author": "common words"
+        },
+        {
+            "quote": "the meeting went on for much longer than anyone had expected it to",
+            "author": "common words"
+        },
+        {
+            "quote": "he knew that if he worked hard enough he could achieve anything he set his mind to",
+            "author": "common words"
+        },
+        {
+            "quote": "the whole point of keeping a journal is to help you understand your own thoughts better",
+            "author": "common words"
+        },
+        {
+            "quote": "we have to think about what kind of future we want to build for the next generation",
+            "author": "common words"
+        },
+        {
+            "quote": "sometimes the right answer is simply to ask for help when you need it most",
+            "author": "common words"
+        },
+        {
+            "quote": "they took a moment to appreciate how far they had come since the beginning of the year",
+            "author": "common words"
+        },
+        {
+            "quote": "the more you read the better you get at understanding what other people are trying to say",
+            "author": "common words"
+        },
+        {
+            "quote": "she was the kind of person who always found a way to see the good in everything",
+            "author": "common words"
+        },
+        {
+            "quote": "making time for the people you care about is one of the most important things you can do",
+            "author": "common words"
+        },
+        {
+            "quote": "he took a few minutes each morning to think about what he wanted to accomplish that day",
+            "author": "common words"
+        },
+        {
+            "quote": "the park was quiet in the early morning before most people had started their day",
+            "author": "common words"
+        },
+        {
+            "quote": "writing down your goals is one of the best ways to make sure you actually reach them",
+            "author": "common words"
+        },
+        {
+            "quote": "they had never done anything quite like this before but they were ready to give it a try",
+            "author": "common words"
+        },
+        {
+            "quote": "the biggest mistake most people make is waiting until everything is perfect before they start",
+            "author": "common words"
+        },
+        {
+            "quote": "she put her phone away and decided to spend the rest of the evening reading",
+            "author": "common words"
+        },
+        {
+            "quote": "the best way to deal with a difficult situation is to face it head on",
+            "author": "common words"
+        },
+        {
+            "quote": "every small effort you make adds up to something much larger than you might realize",
+            "author": "common words"
+        },
+        {
+            "quote": "he spent the evening looking back on everything that had happened over the past year",
+            "author": "common words"
+        }
+    ]
+}

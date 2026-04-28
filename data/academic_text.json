@@ -1,0 +1,166 @@
+{
+    "medium": [
+        {
+            "quote": "The rapid advancement of technology has transformed modern society.",
+            "author": "academic"
+        },
+        {
+            "quote": "Democratic institutions serve as the foundation of civil governance.",
+            "author": "academic"
+        },
+        {
+            "quote": "Empirical research requires careful observation and systematic analysis.",
+            "author": "academic"
+        },
+        {
+            "quote": "The distribution of wealth remains one of the most contested political issues.",
+            "author": "academic"
+        },
+        {
+            "quote": "Language shapes thought as much as thought shapes language.",
+            "author": "academic"
+        },
+        {
+            "quote": "Climate change presents a complex challenge requiring international cooperation.",
+            "author": "academic"
+        },
+        {
+            "quote": "The scientific method depends on reproducible, falsifiable experimentation.",
+            "author": "academic"
+        },
+        {
+            "quote": "Urbanization has reshaped demographic patterns throughout the industrialized world.",
+            "author": "academic"
+        },
+        {
+            "quote": "Cognitive biases systematically distort human reasoning and decision-making.",
+            "author": "academic"
+        },
+        {
+            "quote": "The relationship between education and economic mobility is well-established.",
+            "author": "academic"
+        },
+        {
+            "quote": "Globalization has accelerated both economic integration and cultural exchange.",
+            "author": "academic"
+        },
+        {
+            "quote": "Evolutionary biology explains the diversity of life through natural selection.",
+            "author": "academic"
+        },
+        {
+            "quote": "Social capital refers to the networks, norms, and trust that facilitate cooperation.",
+            "author": "academic"
+        },
+        {
+            "quote": "The principle of utility holds that actions should maximize overall well-being.",
+            "author": "academic"
+        },
+        {
+            "quote": "Market failures arise when competitive markets fail to allocate resources efficiently.",
+            "author": "academic"
+        },
+        {
+            "quote": "Neuroplasticity demonstrates the brain's capacity to reorganize itself through experience.",
+            "author": "academic"
+        },
+        {
+            "quote": "The rule of law requires that all individuals remain equal before the courts.",
+            "author": "academic"
+        },
+        {
+            "quote": "Peer review remains the cornerstone of scientific quality assurance.",
+            "author": "academic"
+        },
+        {
+            "quote": "Philosophical inquiry begins with questioning assumptions that others take for granted.",
+            "author": "academic"
+        },
+        {
+            "quote": "The tragedy of the commons describes the overuse of shared, unregulated resources.",
+            "author": "academic"
+        }
+    ],
+    "hard": [
+        {
+            "quote": "The epistemological foundations of modern science rest on the assumption that the natural world is knowable through systematic observation.",
+            "author": "academic"
+        },
+        {
+            "quote": "Democratic legitimacy derives not merely from electoral outcomes but from the quality of deliberation that precedes them.",
+            "author": "academic"
+        },
+        {
+            "quote": "The distinction between correlation and causation is fundamental to any rigorous empirical analysis of social phenomena.",
+            "author": "academic"
+        },
+        {
+            "quote": "Kant's categorical imperative holds that one ought to act only according to maxims one could will to become universal laws.",
+            "author": "academic"
+        },
+        {
+            "quote": "The emergence of complex adaptive systems challenges reductive explanations that rely solely on the properties of constituent parts.",
+            "author": "academic"
+        },
+        {
+            "quote": "Institutional economics emphasizes that formal rules and informal norms jointly constrain economic behavior in ways that market models often neglect.",
+            "author": "academic"
+        },
+        {
+            "quote": "The Sapir-Whorf hypothesis, in its strong form, suggests that the structure of a language determines the cognitive categories available to its speakers.",
+            "author": "academic"
+        },
+        {
+            "quote": "Post-colonial theory examines how imperial legacies continue to structure knowledge production, political institutions, and economic relations.",
+            "author": "academic"
+        },
+        {
+            "quote": "The precautionary principle stipulates that when an action raises threats of harm, precautionary measures should be taken even if some causal links are not fully established.",
+            "author": "academic"
+        },
+        {
+            "quote": "Information asymmetry, wherein one party to a transaction possesses superior knowledge, fundamentally undermines the efficiency conditions of competitive markets.",
+            "author": "academic"
+        },
+        {
+            "quote": "The replication crisis in social psychology has prompted a wholesale reassessment of research design, statistical methods, and publication incentives.",
+            "author": "academic"
+        },
+        {
+            "quote": "Deliberative democracy theorists argue that political legitimacy requires that decisions be grounded in public reasoning accessible to all affected parties.",
+            "author": "academic"
+        },
+        {
+            "quote": "Godel's incompleteness theorems establish that no sufficiently expressive formal system can be both consistent and complete with respect to arithmetic.",
+            "author": "academic"
+        },
+        {
+            "quote": "The concept of bounded rationality, introduced by Herbert Simon, recognizes that decision-makers face cognitive limits on the information they can process.",
+            "author": "academic"
+        },
+        {
+            "quote": "Intersectionality as an analytical framework examines how overlapping social identities create compounding systems of discrimination and privilege.",
+            "author": "academic"
+        },
+        {
+            "quote": "Path dependence in institutional development implies that initial choices constrain subsequent options in ways that may persist long after the original rationale has disappeared.",
+            "author": "academic"
+        },
+        {
+            "quote": "The measurement of utility across individuals remains an intractable problem for welfare economics, undermining interpersonal comparisons of well-being.",
+            "author": "academic"
+        },
+        {
+            "quote": "Phenomenological inquiry, as developed by Husserl, seeks to describe the structures of experience as they present themselves to consciousness prior to theoretical interpretation.",
+            "author": "academic"
+        },
+        {
+            "quote": "Natural selection operates on heritable variation in fitness, gradually shifting the frequency of traits within a population across successive generations.",
+            "author": "academic"
+        },
+        {
+            "quote": "The social construction of scientific facts does not imply their arbitrariness; rather, it highlights the institutional and communicative processes through which knowledge claims are validated.",
+            "author": "academic"
+        }
+    ]
+}
