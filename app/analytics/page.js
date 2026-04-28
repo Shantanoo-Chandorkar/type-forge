@@ -164,46 +164,46 @@ export default function AnalyticsPage() {
                         showing last {attempts.length} attempt{attempts.length !== 1 ? 's' : ''}
                     </p>
                     <div className="overflow-x-auto mb-8">
-                    <table className="w-full border-collapse min-w-[560px]">
-                        <thead>
-                            <tr
-                                className={`text-muted ${sizes.label} text-left border-b border-border`}
-                            >
-                                {[
-                                    '#',
-                                    'mode',
-                                    'difficulty',
-                                    'timer',
-                                    'wpm',
-                                    'accuracy',
-                                    'consistency',
-                                    'time',
-                                ].map((h) => (
-                                    <th key={h} className="pb-2 pr-6 font-normal">
-                                        {h}
-                                    </th>
-                                ))}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {attempts.map((a, i) => (
+                        <table className="w-full border-collapse min-w-[560px]">
+                            <thead>
                                 <tr
-                                    key={a.id}
-                                    className={`border-b border-border-subtle text-foreground ${sizes.data}`}
-                                    title={formatTime(a.timestamp)}
+                                    className={`text-muted ${sizes.label} text-left border-b border-border`}
                                 >
-                                    <td className="py-2 pr-6 text-muted">{i + 1}</td>
-                                    <td className="py-2 pr-6">{a.contentMode ?? 'quotes'}</td>
-                                    <td className="py-2 pr-6">{a.difficulty}</td>
-                                    <td className="py-2 pr-6">{a.timer}s</td>
-                                    <td className="py-2 pr-6 font-bold">{a.wpm}</td>
-                                    <td className="py-2 pr-6">{a.accuracy}%</td>
-                                    <td className="py-2 pr-6">{a.consistency}%</td>
-                                    <td className="py-2 pr-6">{a.timeElapsed}s</td>
+                                    {[
+                                        '#',
+                                        'mode',
+                                        'difficulty',
+                                        'timer',
+                                        'wpm',
+                                        'accuracy',
+                                        'consistency',
+                                        'time',
+                                    ].map((h) => (
+                                        <th key={h} className="pb-2 pr-6 font-normal">
+                                            {h}
+                                        </th>
+                                    ))}
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                {attempts.map((a, i) => (
+                                    <tr
+                                        key={a.id}
+                                        className={`border-b border-border-subtle text-foreground ${sizes.data}`}
+                                        title={formatTime(a.timestamp)}
+                                    >
+                                        <td className="py-2 pr-6 text-muted">{i + 1}</td>
+                                        <td className="py-2 pr-6">{a.contentMode ?? 'quotes'}</td>
+                                        <td className="py-2 pr-6">{a.difficulty}</td>
+                                        <td className="py-2 pr-6">{a.timer}s</td>
+                                        <td className="py-2 pr-6 font-bold">{a.wpm}</td>
+                                        <td className="py-2 pr-6">{a.accuracy}%</td>
+                                        <td className="py-2 pr-6">{a.consistency}%</td>
+                                        <td className="py-2 pr-6">{a.timeElapsed}s</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 </>
             )}
