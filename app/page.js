@@ -90,6 +90,17 @@ export default function Home() {
     const testOverAndNotCompleted = timeLeft === 0 && quoteString.length !== userTyping.length;
     const isTestOver = testOverAndCompleted || testOverAndNotCompleted;
 
+    const totalErrors = userTypingArray.reduce((errorCount, char, index) => {
+        // If the typed character do not match the target character, increment the errorCount.
+        // char - typed character.
+        // quoteArray[index] - target character.
+        if (char !== quoteArray[index]) {
+            errorCount++;
+        }
+
+        return errorCount;
+    }, 0);
+
     return (
         <div className="flex w-full m-auto justify-center items-center h-screen flex-col gap-4">
             <h1>{`Type Forge - Let's build this in a non-AI way.`}</h1>
@@ -139,11 +150,14 @@ export default function Home() {
                             {timeLeft > 0 ? <span>{timeLeft}</span> : <span>{`--|--`}</span>}
                         </p>
                     </>
+                    <>
+                        <p>Total Errors: {totalErrors}</p>
+                    </>
                 </div>
                 <div
                     className={`relative w-full p-10 border border-2 text-left bg-white 
                         ${
-                            testOverAndNotCompleted
+                            testOverAndNotCompleted || totalErrors
                                 ? 'border-red-500 cursor-not-allowed'
                                 : testOverAndCompleted
                                   ? 'border-green-500 cursor-not-allowed'
