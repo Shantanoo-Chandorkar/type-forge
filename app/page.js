@@ -19,14 +19,39 @@ export default function Home() {
     const [randomQuote, setRandomeQuote] = useState(null);
     const [timer, setTimer] = useState(15);
     const [difficulty, setDifficulty] = useState('easy');
+
+    // Execution states.
     const [userTyping, setUserTyping] = useState('');
+    const [timeLeft, setTimeLeft] = useState(15); // Same as timer.
+    const [isActive, setIsActive] = useState(false);
 
     const inputRef = useRef(null);
 
+    // Only runs on mount or
+    // When the dropdown options change
     useEffect(() => {
         setRandomeQuote(getRandomQuote(difficulty));
         setUserTyping('');
-    }, [difficulty]);
+        setTimeLeft(parseInt(timer, 10));
+        setIsActive(false);
+    }, [difficulty, timer]);
+
+    // Interval Engine.
+    useEffect(() => {
+        let countDownInterval;
+        if (isActive && timeLeft > 0) {
+            countDownInterval = setInterval(() => {
+                setTimeLeft((prev) => prev - 1);
+            }, 1000);
+        } else if (timeLeft === 0) {
+            setIsActive(false);
+            clearInterval(countDownInterval);
+        }
+
+        return () => {
+            clearInterval(countDownInterval);
+        };
+    }, [isActive, timeLeft]);
 
     const handleTimerChange = (e) => {
         setTimer(e.target.value);
@@ -37,11 +62,18 @@ export default function Home() {
     };
 
     const handleTypingChange = (e) => {
+        // Start the clock on first key stroke input.
+        if (!isActive && timeLeft > 0 && e.target.value.length > 0) {
+            setIsActive(true);
+        }
         setUserTyping(e.target.value);
     };
 
+    // Return early if randomQuote is not available yet.
     if (!randomQuote) return null;
 
+    // Convert the quote string and user typing string to arrays of characters.
+    // This is done to independently check the status of each character typed.
     const quoteString = randomQuote.quote;
     const quoteArray = quoteString.split('');
     const userTypingArray = userTyping.split('');
@@ -59,6 +91,7 @@ export default function Home() {
                                 onChange={handleTimerChange}
                                 value={timer}
                                 id="timer"
+                                disabled={isActive}
                             >
                                 {/* <option value="">Select the timer value</option> */}
                                 {TIMER_VALUES.map((timeVal, index) => (
@@ -77,6 +110,7 @@ export default function Home() {
                                 className="border border-gray-300 border-2"
                                 onChange={handleDifficultyChange}
                                 value={difficulty}
+                                disabled={isActive}
                             >
                                 {/* <option value=''>Select the difficulty value</option> */}
                                 {DIFFICULTY_LEVELS.map((level, index) => (
@@ -87,9 +121,15 @@ export default function Home() {
                             </select>
                         </label>
                     </>
+                    <>
+                        <p>
+                            Time Left:{' '}
+                            {timeLeft > 0 ? <span>{timeLeft}</span> : <span>{`--|--`}</span>}
+                        </p>
+                    </>
                 </div>
                 <div
-                    className="relative w-full p-10 border border-gray-300 border-2 text-left cursor-text bg-white"
+                    className={`relative w-full p-10 border border-2 text-left bg-white ${timeLeft === 0 ? 'border-red-500 cursor-not-allowed' : 'border-gray-300 cursor-text'}`}
                     onClick={() => inputRef.current?.focus()}
                 >
                     {/* Render using CharNode */}
@@ -116,6 +156,7 @@ export default function Home() {
                         autoCapitalize="off"
                         autoCorrect="off"
                         spellCheck="false"
+                        disabled={timeLeft === 0}
                     ></textarea>
                 </div>
             </div>
