@@ -83,7 +83,9 @@ export function SettingsProvider({ children }) {
     };
 
     return (
-        <SettingsContext.Provider value={{ fontFamilyId, fontSizeId, updateFontFamily, updateFontSize, mounted }}>
+        <SettingsContext.Provider
+            value={{ fontFamilyId, fontSizeId, updateFontFamily, updateFontSize, mounted }}
+        >
             {children}
         </SettingsContext.Provider>
     );
