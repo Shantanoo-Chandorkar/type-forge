@@ -135,9 +135,7 @@ export default function AnalyticsPage() {
                                 }}
                                 labelStyle={{ color: 'var(--muted)' }}
                                 itemStyle={{ color: 'var(--background)' }}
-                                labelFormatter={(_, payload) =>
-                                    payload?.[0]?.payload?.label ?? ''
-                                }
+                                labelFormatter={(_, payload) => payload?.[0]?.payload?.label ?? ''}
                                 formatter={(value) => [value, 'wpm']}
                             />
                             <Line

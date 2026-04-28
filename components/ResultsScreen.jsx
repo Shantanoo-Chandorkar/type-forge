@@ -56,9 +56,7 @@ export default function ResultsScreen({ attempt, resetTest, prevBest, onStartDri
                         </div>
                     )}
                     {prevBest !== null && !isNewBest && deltaToBest > 0 && (
-                        <div className="text-xs text-muted mt-1">
-                            {deltaToBest} wpm from best
-                        </div>
+                        <div className="text-xs text-muted mt-1">{deltaToBest} wpm from best</div>
                     )}
                 </div>
                 <div>

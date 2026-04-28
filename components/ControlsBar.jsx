@@ -52,9 +52,7 @@ export default function ControlsBar({
     const difficultyRow =
         contentMode === 'code' ? (
             <div className="flex items-center gap-3">
-                <span
-                    className={`${sizes.label} font-mono text-muted uppercase tracking-widest`}
-                >
+                <span className={`${sizes.label} font-mono text-muted uppercase tracking-widest`}>
                     lang
                 </span>
                 {CODE_LANGUAGES.map(({ difficulty: d, label }) => (
@@ -73,9 +71,7 @@ export default function ControlsBar({
             </div>
         ) : (
             <div className="flex items-center gap-3">
-                <span
-                    className={`${sizes.label} font-mono text-muted uppercase tracking-widest`}
-                >
+                <span className={`${sizes.label} font-mono text-muted uppercase tracking-widest`}>
                     difficulty
                 </span>
                 {DIFFICULTY_LEVELS.map((level) => (
@@ -95,14 +91,10 @@ export default function ControlsBar({
         );
 
     return (
-        <div
-            className={`flex flex-col gap-3 ${isActive ? 'opacity-40 pointer-events-none' : ''}`}
-        >
+        <div className={`flex flex-col gap-3 ${isActive ? 'opacity-40 pointer-events-none' : ''}`}>
             {/* Content mode row */}
             <div className="flex items-center gap-3 flex-wrap">
-                <span
-                    className={`${sizes.label} font-mono text-muted uppercase tracking-widest`}
-                >
+                <span className={`${sizes.label} font-mono text-muted uppercase tracking-widest`}>
                     mode
                 </span>
                 {CONTENT_MODES.map(({ id, label }) => (

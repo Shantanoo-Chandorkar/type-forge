@@ -244,10 +244,8 @@ export function useTypingTest({ difficulty, timer, contentMode = 'quotes', custo
 
         const finalWpm =
             elapsedMin === 0 ? 0 : Math.max(0, Math.round(correctChars / 5 / elapsedMin));
-        const rawWpm =
-            elapsedMin === 0 ? 0 : Math.max(0, Math.round(typedLength / 5 / elapsedMin));
-        const accuracy =
-            typedLength === 0 ? 100 : Math.round((correctChars / typedLength) * 100);
+        const rawWpm = elapsedMin === 0 ? 0 : Math.max(0, Math.round(typedLength / 5 / elapsedMin));
+        const accuracy = typedLength === 0 ? 100 : Math.round((correctChars / typedLength) * 100);
 
         // Consistency: 100 minus the coefficient of variation of per-second WPM.
         let consistency = 100;

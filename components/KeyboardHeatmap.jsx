@@ -12,23 +12,49 @@ const KEYBOARD_ROWS = [
     {
         offsetX: Math.round(0.5 * STEP),
         keys: [
-            ['q', 'Q'], ['w', 'W'], ['e', 'E'], ['r', 'R'], ['t', 'T'],
-            ['y', 'Y'], ['u', 'U'], ['i', 'I'], ['o', 'O'], ['p', 'P'],
-            ['[', '['], [']', ']'],
+            ['q', 'Q'],
+            ['w', 'W'],
+            ['e', 'E'],
+            ['r', 'R'],
+            ['t', 'T'],
+            ['y', 'Y'],
+            ['u', 'U'],
+            ['i', 'I'],
+            ['o', 'O'],
+            ['p', 'P'],
+            ['[', '['],
+            [']', ']'],
         ],
     },
     {
         offsetX: Math.round(0.9 * STEP),
         keys: [
-            ['a', 'A'], ['s', 'S'], ['d', 'D'], ['f', 'F'], ['g', 'G'],
-            ['h', 'H'], ['j', 'J'], ['k', 'K'], ['l', 'L'], [';', ';'], ["'", "'"],
+            ['a', 'A'],
+            ['s', 'S'],
+            ['d', 'D'],
+            ['f', 'F'],
+            ['g', 'G'],
+            ['h', 'H'],
+            ['j', 'J'],
+            ['k', 'K'],
+            ['l', 'L'],
+            [';', ';'],
+            ["'", "'"],
         ],
     },
     {
         offsetX: Math.round(1.6 * STEP),
         keys: [
-            ['z', 'Z'], ['x', 'X'], ['c', 'C'], ['v', 'V'], ['b', 'B'],
-            ['n', 'N'], ['m', 'M'], [',', ','], ['.', '.'], ['/', '/'],
+            ['z', 'Z'],
+            ['x', 'X'],
+            ['c', 'C'],
+            ['v', 'V'],
+            ['b', 'B'],
+            ['n', 'N'],
+            ['m', 'M'],
+            [',', ','],
+            ['.', '.'],
+            ['/', '/'],
         ],
     },
 ];
@@ -88,14 +114,7 @@ export default function KeyboardHeatmap({ keyErrorTotals }) {
 
                         return (
                             <g key={char}>
-                                <rect
-                                    x={x}
-                                    y={y}
-                                    width={KEY_W}
-                                    height={KEY_H}
-                                    rx={4}
-                                    fill={fill}
-                                />
+                                <rect x={x} y={y} width={KEY_W} height={KEY_H} rx={4} fill={fill} />
                                 <text
                                     x={x + KEY_W / 2}
                                     y={y + KEY_H / 2 - (count > 0 ? 5 : 0)}
@@ -157,7 +176,8 @@ export default function KeyboardHeatmap({ keyErrorTotals }) {
                         width: 80,
                         height: 8,
                         borderRadius: 4,
-                        background: 'linear-gradient(to right, hsl(142, 58%, 42%), hsl(0, 65%, 44%))',
+                        background:
+                            'linear-gradient(to right, hsl(142, 58%, 42%), hsl(0, 65%, 44%))',
                     }}
                 />
                 <span className="text-xs font-mono text-muted">most errors</span>
