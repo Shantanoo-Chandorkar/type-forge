@@ -1,14 +1,13 @@
 import React from 'react';
 
 const CharNode = React.memo(({ char, status }) => {
-    let colorClass = 'text-gray-400';
+    let colorClass = 'text-[#aaaaaa]';
 
     if (status === 'correct') {
-        colorClass = 'text-green-500';
+        colorClass = 'text-[#4a4a4a]';
     } else if (status === 'incorrect') {
-        // For spaces - background.
-        // For text - text color.
-        colorClass = char === ' ' ? 'bg-red-400/50' : 'text-red-500';
+        // Spaces show as background highlight; other characters show as red text.
+        colorClass = char === ' ' ? 'bg-red-300/30' : 'text-[#c94040]';
     }
 
     return <span className={`text-2xl font-mono ${colorClass}`}>{char}</span>;
