@@ -21,13 +21,27 @@ export function useTypingTest({ difficulty, timer }) {
 
     const inputRef = useRef(null);
 
-    // Load a new quote and reset all test state when settings change.
+    // Stable ref so the difficulty effect can read the current timer value
+    // without listing timer as a dep — which would re-trigger quote reloads
+    // on every timer change.
+    const timerRef = useRef(timer);
+
+    // Fires when difficulty changes: load a new quote and fully reset test state.
     useEffect(() => {
         setQuote(getRandomQuote(difficulty));
         setUserTyping('');
-        setTimeLeft(timer);
+        setTimeLeft(timerRef.current);
         setIsActive(false);
-    }, [difficulty, timer]);
+    }, [difficulty]);
+
+    // Fires when timer setting changes: preserve the current quote, only reset
+    // progress and timer so the user does not lose their quote mid-read.
+    useEffect(() => {
+        timerRef.current = timer;
+        setTimeLeft(timer);
+        setUserTyping('');
+        setIsActive(false);
+    }, [timer]);
 
     // Interval created once per test run rather than once per second,
     // preventing a new setInterval on every timeLeft state update.
