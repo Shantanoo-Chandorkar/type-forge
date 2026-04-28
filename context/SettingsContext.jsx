@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, startTransition } from 'react';
 
 export const FONT_OPTIONS = [
     { id: 'share-tech-mono', label: 'Share Tech Mono', cssVar: 'var(--font-share-tech-mono)' },
@@ -45,9 +45,11 @@ export function SettingsProvider({ children }) {
     useEffect(() => {
         const savedFamily = localStorage.getItem(STORAGE_KEYS.fontFamily) ?? DEFAULTS.fontFamilyId;
         const savedSize = localStorage.getItem(STORAGE_KEYS.fontSize) ?? DEFAULTS.fontSizeId;
-        setFontFamilyId(savedFamily);
-        setFontSizeId(savedSize);
-        setMounted(true);
+        startTransition(() => {
+            setFontFamilyId(savedFamily);
+            setFontSizeId(savedSize);
+            setMounted(true);
+        });
     }, []);
 
     useEffect(() => {
