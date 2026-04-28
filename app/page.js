@@ -101,6 +101,13 @@ export default function Home() {
         return errorCount;
     }, 0);
 
+    // Words Per Minute calculations.
+    const totalSeconds = parseInt(timer, 10);
+    const elapsedTime = totalSeconds - timeLeft;
+    const totalCorrectChars = userTyping.length - totalErrors;
+    const result = elapsedTime === 0 ? 0 : totalCorrectChars / 5 / (elapsedTime / 60);
+    const wordsPerMinute = Math.max(0, Math.round(result));
+
     return (
         <div className="flex w-full m-auto justify-center items-center h-screen flex-col gap-4">
             <h1>{`Type Forge - Let's build this in a non-AI way.`}</h1>
@@ -153,11 +160,16 @@ export default function Home() {
                     <>
                         <p>Total Errors: {totalErrors}</p>
                     </>
+                    <>
+                        <p>
+                            Words Per Minute: <strong>{wordsPerMinute}</strong>
+                        </p>
+                    </>
                 </div>
                 <div
                     className={`relative w-full p-10 border border-2 text-left bg-white 
                         ${
-                            testOverAndNotCompleted || totalErrors
+                            testOverAndNotCompleted
                                 ? 'border-red-500 cursor-not-allowed'
                                 : testOverAndCompleted
                                   ? 'border-green-500 cursor-not-allowed'
