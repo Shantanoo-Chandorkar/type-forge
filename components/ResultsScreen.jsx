@@ -44,7 +44,7 @@ export default function ResultsScreen({ attempt, resetTest, prevBest, onStartDri
     const drillRec = getDrillRecommendation(attempt.keyErrors, attempt.wpm);
 
     return (
-        <div className="max-w-4xl mx-auto px-12 w-full pb-16 font-mono">
+        <div className="max-w-4xl mx-auto px-4 sm:px-8 md:px-12 w-full pb-16 font-mono">
             {/* Primary stats */}
             <div className="flex gap-12 pt-12 pb-8 items-end">
                 <div>

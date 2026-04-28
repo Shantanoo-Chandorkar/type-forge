@@ -9,7 +9,7 @@ export default function SettingsPage() {
     if (!mounted) return null;
 
     return (
-        <main className="max-w-4xl mx-auto px-12 w-full pb-16">
+        <main className="max-w-4xl mx-auto px-4 sm:px-8 md:px-12 w-full pb-16">
             <div className="pt-16 flex flex-col gap-10">
                 <div className="flex flex-col gap-4">
                     <span className="text-xs font-mono text-muted uppercase tracking-widest">

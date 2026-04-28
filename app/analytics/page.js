@@ -28,7 +28,7 @@ export default function AnalyticsPage() {
 
     if (!hasAttempts && !hasPersonalBests && Object.keys(keyErrorTotals).length === 0) {
         return (
-            <main className="max-w-4xl mx-auto px-12 w-full pb-16 font-mono pt-16">
+            <main className="max-w-4xl mx-auto px-4 sm:px-8 md:px-12 w-full pb-16 font-mono pt-16">
                 <p className={`text-muted ${sizes.data}`}>no attempts yet, run a test first</p>
             </main>
         );
@@ -52,7 +52,7 @@ export default function AnalyticsPage() {
         new Date(ts).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
     return (
-        <main className="max-w-4xl mx-auto px-12 w-full pb-16 font-mono">
+        <main className="max-w-4xl mx-auto px-4 sm:px-8 md:px-12 w-full pb-16 font-mono">
             {/* Summary cards */}
             {hasAttempts && (
                 <div className="flex flex-wrap gap-10 pt-12 pb-8">
@@ -163,7 +163,8 @@ export default function AnalyticsPage() {
                     <p className={`text-muted ${sizes.label} mb-3`}>
                         showing last {attempts.length} attempt{attempts.length !== 1 ? 's' : ''}
                     </p>
-                    <table className="w-full border-collapse mb-8">
+                    <div className="overflow-x-auto mb-8">
+                    <table className="w-full border-collapse min-w-[560px]">
                         <thead>
                             <tr
                                 className={`text-muted ${sizes.label} text-left border-b border-border`}
@@ -203,6 +204,7 @@ export default function AnalyticsPage() {
                             ))}
                         </tbody>
                     </table>
+                    </div>
                 </>
             )}
 

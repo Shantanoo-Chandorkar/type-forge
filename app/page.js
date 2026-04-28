@@ -90,7 +90,7 @@ export default function Home() {
     }
 
     return (
-        <main className="max-w-4xl mx-auto px-12 w-full pb-16">
+        <main className="max-w-4xl mx-auto px-4 sm:px-8 md:px-12 w-full pb-16">
             {showCustomModal && (
                 <CustomTextModal
                     onConfirm={handleCustomTextConfirm}
