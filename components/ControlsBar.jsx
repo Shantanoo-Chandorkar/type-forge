@@ -21,7 +21,7 @@ export default function ControlsBar({
 }) {
     return (
         <div
-            className={`flex items-center gap-8 ${isActive ? 'opacity-40 pointer-events-none' : ''}`}
+            className={`flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 ${isActive ? 'opacity-40 pointer-events-none' : ''}`}
         >
             <div className="flex items-center gap-3">
                 <span className="text-xs font-mono text-[#aaaaaa] uppercase tracking-widest">
