@@ -1,13 +1,13 @@
 import React from 'react';
 
 const CharNode = React.memo(({ char, status }) => {
-    let colorClass = 'text-[#aaaaaa]';
+    let colorClass = 'text-muted';
 
     if (status === 'correct') {
-        colorClass = 'text-[#4a4a4a]';
+        colorClass = 'text-correct';
     } else if (status === 'incorrect') {
-        // Spaces show as background highlight; other characters show as red text.
-        colorClass = char === ' ' ? 'bg-red-300/30' : 'text-[#c94040]';
+        // Spaces show as a background highlight; other characters show as red text.
+        colorClass = char === ' ' ? 'bg-incorrect/20' : 'text-incorrect';
     }
 
     return (

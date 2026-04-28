@@ -14,15 +14,15 @@ export default function MetricsDisplay({ timeLeft, timerMax, totalErrors, wordsP
 
     return (
         <div className="flex items-end gap-8 pt-8">
-            <span className="text-5xl font-bold font-mono text-[#2d2d2d] leading-none tabular-nums">
+            <span className="text-5xl font-bold font-mono text-foreground leading-none tabular-nums">
                 {formattedTime}
             </span>
             <div className="flex items-center gap-6 pb-1">
-                <span className="text-sm font-mono text-[#aaaaaa]">
-                    errors <strong className="text-[#c94040]">{totalErrors}</strong>
+                <span className="text-sm font-mono text-muted">
+                    errors <strong className="text-incorrect">{totalErrors}</strong>
                 </span>
-                <span className="text-sm font-mono text-[#aaaaaa]">
-                    wpm <strong className="text-[#2d2d2d]">{wordsPerMinute}</strong>
+                <span className="text-sm font-mono text-muted">
+                    wpm <strong className="text-foreground">{wordsPerMinute}</strong>
                 </span>
             </div>
         </div>

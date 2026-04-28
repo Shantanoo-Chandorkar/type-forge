@@ -69,7 +69,7 @@ const TypingArea = memo(function TypingArea({
             <div className="flex flex-col items-center gap-2 pt-8">
                 <button
                     onClick={resetTest}
-                    className="text-[#aaaaaa] hover:text-[#2d2d2d] transition-colors"
+                    className="text-muted hover:text-foreground transition-colors"
                     aria-label="Reset test"
                 >
                     <svg
@@ -87,7 +87,7 @@ const TypingArea = memo(function TypingArea({
                         <path d="M3 3v5h5" />
                     </svg>
                 </button>
-                <span className="text-sm font-mono text-[#aaaaaa]">tab to restart</span>
+                <span className="text-sm font-mono text-muted">tab to restart</span>
             </div>
         </div>
     );
