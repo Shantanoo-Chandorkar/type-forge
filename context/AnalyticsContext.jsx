@@ -21,7 +21,7 @@ export function AnalyticsProvider({ children }) {
             const raw = sessionStorage.getItem(STORAGE_KEY);
             if (raw) setAttempts(JSON.parse(raw));
         } catch {
-            // Corrupt data — start fresh.
+            // Corrupt data, start fresh.
             sessionStorage.removeItem(STORAGE_KEY);
         }
     }, []);
@@ -37,7 +37,7 @@ export function AnalyticsProvider({ children }) {
             try {
                 sessionStorage.setItem(STORAGE_KEY, JSON.stringify(next));
             } catch {
-                // sessionStorage full — persist best-effort.
+                // sessionStorage full, persist best-effort.
             }
             return next;
         });

@@ -21,7 +21,7 @@ export default function AnalyticsPage() {
         return (
             <main className="max-w-4xl mx-auto px-12 w-full pb-16 font-mono pt-16">
                 <p className="text-[#aaaaaa] text-sm">
-                    no attempts yet — run a test first
+                    no attempts yet, run a test first
                 </p>
             </main>
         );

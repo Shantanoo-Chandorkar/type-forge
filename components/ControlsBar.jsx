@@ -3,7 +3,7 @@ const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
 
 /**
  * Inline selector bar for timer and difficulty settings.
- * Rendered as plain text buttons — disabled while a test is in progress.
+ * Rendered as plain text buttons, disabled while a test is in progress.
  *
  * @param {Object} props
  * @param {number} props.timer - Currently selected timer value in seconds

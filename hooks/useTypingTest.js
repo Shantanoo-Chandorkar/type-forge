@@ -23,7 +23,7 @@ export function useTypingTest({ difficulty, timer }) {
     const inputRef = useRef(null);
 
     // Stable ref so the difficulty effect can read the current timer value
-    // without listing timer as a dep — which would re-trigger quote reloads
+    // without listing timer as a dep, which would re-trigger quote reloads
     // on every timer change.
     const timerRef = useRef(timer);
 

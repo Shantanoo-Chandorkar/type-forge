@@ -6,7 +6,7 @@
     --muted: #aaaaaa;
     --correct: #4a4a4a;
     --incorrect: #c94040;
-    /* Default char size — overridden at runtime by SettingsContext */
+    /* Default char size, overridden at runtime by SettingsContext */
     --char-font-size: 1.25rem;
 }
 

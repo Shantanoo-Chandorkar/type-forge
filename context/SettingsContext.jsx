@@ -38,7 +38,7 @@ const SettingsContext = createContext(null);
 export function SettingsProvider({ children }) {
     const [fontFamilyId, setFontFamilyId] = useState(DEFAULTS.fontFamilyId);
     const [fontSizeId, setFontSizeId] = useState(DEFAULTS.fontSizeId);
-    // Tracks whether localStorage has been read — prevents hydration mismatch
+    // Tracks whether localStorage has been read, prevents hydration mismatch
     // between the server-rendered defaults and the client-stored values.
     const [mounted, setMounted] = useState(false);
 
