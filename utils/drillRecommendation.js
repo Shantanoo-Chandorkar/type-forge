@@ -40,6 +40,29 @@ const CODE_SYMBOL_KEYS = new Set([
 ]);
 
 /**
+ * Iterates a per-key error map and buckets counts into four categories.
+ *
+ * @param {Record<string, number>} keyErrors - Map of character to error count
+ * @returns {{ punctCount: number, numberCount: number, codeCount: number, letterCount: number, total: number }}
+ */
+function categorizeErrors(keyErrors) {
+    let punctCount = 0;
+    let numberCount = 0;
+    let codeCount = 0;
+    let letterCount = 0;
+
+    for (const [key, count] of Object.entries(keyErrors ?? {})) {
+        if (PUNCTUATION_KEYS.has(key)) punctCount += count;
+        else if (NUMBER_KEYS.has(key)) numberCount += count;
+        else if (CODE_SYMBOL_KEYS.has(key)) codeCount += count;
+        else if (/[a-zA-Z]/.test(key)) letterCount += count;
+    }
+
+    const total = punctCount + numberCount + codeCount + letterCount;
+    return { punctCount, numberCount, codeCount, letterCount, total };
+}
+
+/**
  * Analyzes a per-key error map and returns a drill recommendation based on
  * the dominant error category (punctuation, numbers, code symbols, or letters).
  *
@@ -52,19 +75,7 @@ export function getDrillRecommendation(keyErrors, wpm) {
     const entries = Object.entries(keyErrors ?? {});
     if (entries.length === 0) return null;
 
-    let punctCount = 0;
-    let numberCount = 0;
-    let codeCount = 0;
-    let letterCount = 0;
-
-    for (const [key, count] of entries) {
-        if (PUNCTUATION_KEYS.has(key)) punctCount += count;
-        else if (NUMBER_KEYS.has(key)) numberCount += count;
-        else if (CODE_SYMBOL_KEYS.has(key)) codeCount += count;
-        else if (/[a-zA-Z]/.test(key)) letterCount += count;
-    }
-
-    const total = punctCount + numberCount + codeCount + letterCount;
+    const { punctCount, numberCount, codeCount, letterCount, total } = categorizeErrors(keyErrors);
     if (total === 0) return null;
 
     if (codeCount / total > 0.3) {

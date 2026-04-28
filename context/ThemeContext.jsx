@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, startTransition } from 'react';
 
 const ThemeContext = createContext(null);
 
@@ -17,7 +17,7 @@ export function ThemeProvider({ children }) {
     useEffect(() => {
         try {
             const saved = localStorage.getItem('tf-theme') ?? 'light';
-            setTheme(saved);
+            startTransition(() => setTheme(saved));
             document.documentElement.setAttribute('data-theme', saved);
         } catch {
             // localStorage unavailable (private browsing), default to light.

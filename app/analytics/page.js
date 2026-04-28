@@ -14,6 +14,84 @@ import { getFontSizeClasses } from '@/utils/fontSizeClasses';
 import KeyboardHeatmap from '@/components/KeyboardHeatmap';
 
 /**
+ * Renders the attempt history as a scrollable table.
+ *
+ * @param {Object} props
+ * @param {Array}  props.attempts - Attempt records to display
+ * @param {Object} props.sizes    - Font size class map from getFontSizeClasses
+ */
+function AttemptHistoryTable({ attempts, sizes }) {
+    const formatTime = (ts) =>
+        new Date(ts).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    return (
+        <>
+            <p className={`text-muted ${sizes.label} mb-3`}>
+                showing last {attempts.length} attempt{attempts.length !== 1 ? 's' : ''}
+            </p>
+            <div className="overflow-x-auto mb-8">
+                <table className="w-full border-collapse min-w-[560px]">
+                    <thead>
+                        <tr
+                            className={`text-muted ${sizes.label} text-left border-b border-border`}
+                        >
+                            {[
+                                '#',
+                                'mode',
+                                'difficulty',
+                                'timer',
+                                'wpm',
+                                'accuracy',
+                                'consistency',
+                                'time',
+                            ].map((h) => (
+                                <th key={h} className="pb-2 pr-6 font-normal">
+                                    {h}
+                                </th>
+                            ))}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {attempts.map((a, i) => (
+                            <tr
+                                key={a.id}
+                                className={`border-b border-border-subtle text-foreground ${sizes.data}`}
+                                title={formatTime(a.timestamp)}
+                            >
+                                <td className="py-2 pr-6 text-muted">{i + 1}</td>
+                                <td className="py-2 pr-6">{a.contentMode ?? 'quotes'}</td>
+                                <td className="py-2 pr-6">{a.difficulty}</td>
+                                <td className="py-2 pr-6">{a.timer}s</td>
+                                <td className="py-2 pr-6 font-bold">{a.wpm}</td>
+                                <td className="py-2 pr-6">{a.accuracy}%</td>
+                                <td className="py-2 pr-6">{a.consistency}%</td>
+                                <td className="py-2 pr-6">{a.timeElapsed}s</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </>
+    );
+}
+
+/**
+ * Renders the keyboard heatmap section with its heading.
+ *
+ * @param {Object} props
+ * @param {Object} props.keyErrorTotals - Cumulative per-key error counts
+ * @param {Object} props.sizes          - Font size class map from getFontSizeClasses
+ */
+function KeyErrorSection({ keyErrorTotals, sizes }) {
+    return (
+        <div className="mb-8">
+            <p className={`text-muted ${sizes.label} mb-3`}>key error heatmap</p>
+            <KeyboardHeatmap keyErrorTotals={keyErrorTotals} />
+        </div>
+    );
+}
+
+/**
  * Analytics page displaying attempt history, WPM trend, personal bests,
  * and a keyboard heatmap showing cumulative per-key error frequency.
  * Data persists across sessions via localStorage through AnalyticsContext.
@@ -47,9 +125,6 @@ export default function AnalyticsPage() {
         wpm: a.wpm,
         label: `${new Date(a.timestamp).toLocaleTimeString()} · ${a.difficulty}`,
     }));
-
-    const formatTime = (ts) =>
-        new Date(ts).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
     return (
         <main className="max-w-4xl mx-auto px-4 sm:px-8 md:px-12 w-full pb-16 font-mono">
@@ -152,61 +227,10 @@ export default function AnalyticsPage() {
             )}
 
             {/* Keyboard heatmap */}
-            <div className="mb-8">
-                <p className={`text-muted ${sizes.label} mb-3`}>key error heatmap</p>
-                <KeyboardHeatmap keyErrorTotals={keyErrorTotals} />
-            </div>
+            <KeyErrorSection keyErrorTotals={keyErrorTotals} sizes={sizes} />
 
             {/* Attempts table */}
-            {hasAttempts && (
-                <>
-                    <p className={`text-muted ${sizes.label} mb-3`}>
-                        showing last {attempts.length} attempt{attempts.length !== 1 ? 's' : ''}
-                    </p>
-                    <div className="overflow-x-auto mb-8">
-                        <table className="w-full border-collapse min-w-[560px]">
-                            <thead>
-                                <tr
-                                    className={`text-muted ${sizes.label} text-left border-b border-border`}
-                                >
-                                    {[
-                                        '#',
-                                        'mode',
-                                        'difficulty',
-                                        'timer',
-                                        'wpm',
-                                        'accuracy',
-                                        'consistency',
-                                        'time',
-                                    ].map((h) => (
-                                        <th key={h} className="pb-2 pr-6 font-normal">
-                                            {h}
-                                        </th>
-                                    ))}
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {attempts.map((a, i) => (
-                                    <tr
-                                        key={a.id}
-                                        className={`border-b border-border-subtle text-foreground ${sizes.data}`}
-                                        title={formatTime(a.timestamp)}
-                                    >
-                                        <td className="py-2 pr-6 text-muted">{i + 1}</td>
-                                        <td className="py-2 pr-6">{a.contentMode ?? 'quotes'}</td>
-                                        <td className="py-2 pr-6">{a.difficulty}</td>
-                                        <td className="py-2 pr-6">{a.timer}s</td>
-                                        <td className="py-2 pr-6 font-bold">{a.wpm}</td>
-                                        <td className="py-2 pr-6">{a.accuracy}%</td>
-                                        <td className="py-2 pr-6">{a.consistency}%</td>
-                                        <td className="py-2 pr-6">{a.timeElapsed}s</td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                </>
-            )}
+            {hasAttempts && <AttemptHistoryTable attempts={attempts} sizes={sizes} />}
 
             {/* Clear button */}
             {hasAttempts && (

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo, startTransition } from 'react';
 import quotesData from '../data/typing_quotes_categorized.json';
 import commonWordsData from '../data/common_words.json';
 import punctuationData from '../data/punctuation_drills.json';
@@ -43,6 +43,74 @@ function getQuotePool(contentMode, difficulty) {
             // 'quotes'
             return quotesData[difficulty] ?? quotesData['easy'];
     }
+}
+
+/**
+ * Assembles a completed attempt object from resolved test values.
+ * Pure function; no ref or state access — all inputs passed explicitly.
+ *
+ * @param {Object} params
+ * @param {Array}   params.timeline           - Per-second WPM snapshots from the test run
+ * @param {number}  params.typedLength        - Total characters typed
+ * @param {number}  params.errors             - Total incorrect characters
+ * @param {Object}  params.keyErrors          - Per-key error counts map
+ * @param {number}  params.timer              - Selected timer duration in seconds
+ * @param {string}  params.difficulty         - Selected difficulty level
+ * @param {string}  params.contentMode        - Content mode for this attempt
+ * @param {boolean} params.testOverAndCompleted - Whether the quote was fully typed
+ * @returns {Object} Completed attempt object ready for storage
+ */
+function assembleAttempt({
+    timeline,
+    typedLength,
+    errors,
+    keyErrors,
+    timer,
+    difficulty,
+    contentMode,
+    testOverAndCompleted,
+}) {
+    const correctChars = Math.max(0, typedLength - errors);
+    const elapsed = timeline.length > 0 ? timeline[timeline.length - 1].second : 0;
+    const elapsedMin = elapsed / 60;
+
+    const finalWpm = elapsedMin === 0 ? 0 : Math.max(0, Math.round(correctChars / 5 / elapsedMin));
+    const rawWpm = elapsedMin === 0 ? 0 : Math.max(0, Math.round(typedLength / 5 / elapsedMin));
+    const accuracy = typedLength === 0 ? 100 : Math.round((correctChars / typedLength) * 100);
+
+    // Consistency: 100 minus the coefficient of variation of per-second WPM.
+    let consistency = 100;
+    const wpmValues = timeline.map((t) => t.wpm).filter((w) => w > 0);
+    if (wpmValues.length > 1) {
+        const mean = wpmValues.reduce((a, b) => a + b, 0) / wpmValues.length;
+        if (mean > 0) {
+            const variance = wpmValues.reduce((a, b) => a + (b - mean) ** 2, 0) / wpmValues.length;
+            const stddev = Math.sqrt(variance);
+            consistency = Math.round(Math.max(0, Math.min(100, 100 - (stddev / mean) * 100)));
+        }
+    }
+
+    return {
+        id: String(Date.now()),
+        timestamp: Date.now(),
+        difficulty,
+        timer,
+        contentMode,
+        wpm: finalWpm,
+        rawWpm,
+        accuracy,
+        errors,
+        consistency,
+        timeElapsed: elapsed,
+        completed: testOverAndCompleted,
+        characters: {
+            correct: correctChars,
+            incorrect: errors,
+            total: typedLength,
+        },
+        wpmTimeline: timeline,
+        keyErrors,
+    };
 }
 
 /**
@@ -93,11 +161,13 @@ export function useTypingTest({ difficulty, timer, contentMode = 'quotes', custo
     // Fires when difficulty, contentMode, or customText changes:
     // load a new quote and fully reset test state.
     useEffect(() => {
-        setQuote(pickQuote());
-        setUserTyping('');
-        setTimeLeft(timerRef.current);
-        setIsActive(false);
-        setCompletedAttempt(null);
+        startTransition(() => {
+            setQuote(pickQuote());
+            setUserTyping('');
+            setTimeLeft(timerRef.current);
+            setIsActive(false);
+            setCompletedAttempt(null);
+        });
         userTypingRef.current = '';
         totalErrorsRef.current = 0;
         wpmTimelineRef.current = [];
@@ -108,10 +178,12 @@ export function useTypingTest({ difficulty, timer, contentMode = 'quotes', custo
     // progress and timer so the user does not lose their quote mid-read.
     useEffect(() => {
         timerRef.current = timer;
-        setTimeLeft(timer);
-        setUserTyping('');
-        setIsActive(false);
-        setCompletedAttempt(null);
+        startTransition(() => {
+            setTimeLeft(timer);
+            setUserTyping('');
+            setIsActive(false);
+            setCompletedAttempt(null);
+        });
         userTypingRef.current = '';
         totalErrorsRef.current = 0;
         wpmTimelineRef.current = [];
@@ -235,52 +307,18 @@ export function useTypingTest({ difficulty, timer, contentMode = 'quotes', custo
     useEffect(() => {
         if (!isTestOver || !quote) return;
 
-        const timeline = [...wpmTimelineRef.current];
-        const typedLength = userTypingRef.current.length;
-        const errors = totalErrorsRef.current;
-        const correctChars = Math.max(0, typedLength - errors);
-        const elapsed = timeline.length > 0 ? timeline[timeline.length - 1].second : 0;
-        const elapsedMin = elapsed / 60;
-
-        const finalWpm =
-            elapsedMin === 0 ? 0 : Math.max(0, Math.round(correctChars / 5 / elapsedMin));
-        const rawWpm = elapsedMin === 0 ? 0 : Math.max(0, Math.round(typedLength / 5 / elapsedMin));
-        const accuracy = typedLength === 0 ? 100 : Math.round((correctChars / typedLength) * 100);
-
-        // Consistency: 100 minus the coefficient of variation of per-second WPM.
-        let consistency = 100;
-        const wpmValues = timeline.map((t) => t.wpm).filter((w) => w > 0);
-        if (wpmValues.length > 1) {
-            const mean = wpmValues.reduce((a, b) => a + b, 0) / wpmValues.length;
-            if (mean > 0) {
-                const variance =
-                    wpmValues.reduce((a, b) => a + (b - mean) ** 2, 0) / wpmValues.length;
-                const stddev = Math.sqrt(variance);
-                consistency = Math.round(Math.max(0, Math.min(100, 100 - (stddev / mean) * 100)));
-            }
-        }
-
-        setCompletedAttempt({
-            id: String(Date.now()),
-            timestamp: Date.now(),
-            difficulty,
-            timer,
-            contentMode,
-            wpm: finalWpm,
-            rawWpm,
-            accuracy,
-            errors,
-            consistency,
-            timeElapsed: elapsed,
-            completed: testOverAndCompleted,
-            characters: {
-                correct: correctChars,
-                incorrect: errors,
-                total: typedLength,
-            },
-            wpmTimeline: timeline,
-            keyErrors: { ...keyErrorsRef.current },
-        });
+        setCompletedAttempt(
+            assembleAttempt({
+                timeline: [...wpmTimelineRef.current],
+                typedLength: userTypingRef.current.length,
+                errors: totalErrorsRef.current,
+                keyErrors: { ...keyErrorsRef.current },
+                timer,
+                difficulty,
+                contentMode,
+                testOverAndCompleted,
+            }),
+        );
         // Only trigger when isTestOver flips to true; the other values are
         // settings/snapshot reads that should not re-trigger the effect.
         // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -1,10 +1,10 @@
 'use client';
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, startTransition } from 'react';
 
 const STORAGE_KEY = 'tf-attempts';
 const KEY_ERRORS_KEY = 'tf-key-errors';
 const PERSONAL_BEST_KEY = 'tf-personal-best';
-const FIFO_CAP = 50;
+const FIFO_CAP = 20;
 
 const AnalyticsContext = createContext(null);
 
@@ -68,9 +68,11 @@ export function AnalyticsProvider({ children }) {
 
     // Hydrate all three stores from localStorage on mount.
     useEffect(() => {
-        setAttempts(readStorage(STORAGE_KEY) ?? []);
-        setKeyErrorTotals(readStorage(KEY_ERRORS_KEY) ?? {});
-        setPersonalBests(readStorage(PERSONAL_BEST_KEY) ?? {});
+        startTransition(() => {
+            setAttempts(readStorage(STORAGE_KEY) ?? []);
+            setKeyErrorTotals(readStorage(KEY_ERRORS_KEY) ?? {});
+            setPersonalBests(readStorage(PERSONAL_BEST_KEY) ?? {});
+        });
     }, []);
 
     /**

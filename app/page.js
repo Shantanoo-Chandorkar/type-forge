@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, startTransition } from 'react';
 import { useTypingTest } from '@/hooks/useTypingTest';
 import { useAnalytics } from '@/context/AnalyticsContext';
 import ControlsBar from '@/components/ControlsBar';
@@ -27,7 +27,7 @@ export default function Home() {
                 testState.completedAttempt.difficulty,
                 testState.completedAttempt.timer,
             );
-            setPrevBestForLastAttempt(prev);
+            startTransition(() => setPrevBestForLastAttempt(prev));
             addAttempt(testState.completedAttempt);
         }
         // addAttempt and getPersonalBest are stable; only re-run when a new attempt appears.
