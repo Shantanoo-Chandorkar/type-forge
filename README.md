@@ -36,7 +36,7 @@ type-forge accumulates per-key error counts across every test you run. After eac
 
 - No signup friction: open the browser, start typing
 - Full offline capability: no network dependency after first load
-- Persistent across sessions: localStorage stores attempt history (50 entries, FIFO) and cumulative key errors indefinitely
+- Persistent across sessions: localStorage stores attempt history (20 entries, FIFO) and cumulative key errors indefinitely
 - Typography is configurable: font family and size match each user's comfort and screen setup
 - Short-burst modes (15s) allow focused repetition without fatigue
 
@@ -56,7 +56,7 @@ type-forge runs as a single-page Next.js application. All state and logic flows 
 
 4. **Results Assembly** — When the timer reaches zero or the passage is completed, the hook reads all mutable refs and assembles a `completedAttempt` object containing every metric, the full WPM timeline, and the character-level breakdown.
 
-5. **Persistence** — The completed attempt is written to localStorage under a 50-entry FIFO array. Personal bests are keyed by `difficulty-timer` pair and updated if the new WPM exceeds the stored record. Cumulative `keyErrors` are merged into a separate localStorage entry that survives across sessions.
+5. **Persistence** — The completed attempt is written to localStorage under a 20-entry FIFO array. Personal bests are keyed by `difficulty-timer` pair and updated if the new WPM exceeds the stored record. Cumulative `keyErrors` are merged into a separate localStorage entry that survives across sessions.
 
 6. **Analytics** — The analytics page reads attempt history from localStorage to render a recharts `LineChart` of WPM over time. The keyboard heatmap is an inline SVG where each key's fill intensity maps to its cumulative error count. Keys with the highest error rates surface as drill recommendations below the heatmap.
 
@@ -97,7 +97,7 @@ The analytics page (`/analytics`) is the core feedback loop that separates type-
 
 **Personal bests table** breaks down your highest WPM per difficulty-timer combination. Each cell in the grid represents a distinct practice context (e.g., hard difficulty at 60 seconds), so you can track progress across specific conditions independently.
 
-**WPM trend chart** plots net WPM across your last 50 attempts in chronological order using a recharts `LineChart`. The trend line makes improvement curves and performance regressions immediately visible.
+**WPM trend chart** plots net WPM across your last 20 attempts in chronological order using a recharts `LineChart`. The trend line makes improvement curves and performance regressions immediately visible.
 
 **Keyboard heatmap** renders a full QWERTY layout as an inline SVG. Each key is shaded from neutral (no errors) to deep red (high error accumulation) based on your total error count across all sessions. The intensity mapping uses a logarithmic scale so that a single high-error key does not wash out the rest of the layout.
 
