@@ -25,6 +25,7 @@ export default function Home() {
     const [timeLeft, setTimeLeft] = useState(15); // Same as timer.
     const [isActive, setIsActive] = useState(false);
 
+    // To capture the user typed input.
     const inputRef = useRef(null);
 
     // Only runs on mount or
@@ -62,8 +63,15 @@ export default function Home() {
     };
 
     const handleTypingChange = (e) => {
+        const currentInput = e.target.value;
+        const targetLength = randomQuote?.quote.length;
+
+        // Check completion state immediately.
+        if (currentInput.length === targetLength) {
+            setIsActive(false); // Stop the timer instantly.
+        }
         // Start the clock on first key stroke input.
-        if (!isActive && timeLeft > 0 && e.target.value.length > 0) {
+        else if (!isActive && timeLeft > 0 && currentInput.length > 0) {
             setIsActive(true);
         }
         setUserTyping(e.target.value);
@@ -77,6 +85,10 @@ export default function Home() {
     const quoteString = randomQuote.quote;
     const quoteArray = quoteString.split('');
     const userTypingArray = userTyping.split('');
+
+    const testOverAndCompleted = quoteString.length > 0 && quoteString.length === userTyping.length;
+    const testOverAndNotCompleted = timeLeft === 0 && quoteString.length !== userTyping.length;
+    const isTestOver = testOverAndCompleted || testOverAndNotCompleted;
 
     return (
         <div className="flex w-full m-auto justify-center items-center h-screen flex-col gap-4">
@@ -129,7 +141,14 @@ export default function Home() {
                     </>
                 </div>
                 <div
-                    className={`relative w-full p-10 border border-2 text-left bg-white ${timeLeft === 0 ? 'border-red-500 cursor-not-allowed' : 'border-gray-300 cursor-text'}`}
+                    className={`relative w-full p-10 border border-2 text-left bg-white 
+                        ${
+                            testOverAndNotCompleted
+                                ? 'border-red-500 cursor-not-allowed'
+                                : testOverAndCompleted
+                                  ? 'border-green-500 cursor-not-allowed'
+                                  : 'border-gray-300 cursor-text'
+                        }`}
                     onClick={() => inputRef.current?.focus()}
                 >
                     {/* Render using CharNode */}
@@ -156,7 +175,8 @@ export default function Home() {
                         autoCapitalize="off"
                         autoCorrect="off"
                         spellCheck="false"
-                        disabled={timeLeft === 0}
+                        disabled={isTestOver}
+                        maxLength={quoteString.length}
                     ></textarea>
                 </div>
             </div>
