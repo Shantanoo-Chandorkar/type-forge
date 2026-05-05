@@ -3,7 +3,7 @@ import { useSettings } from '@/context/SettingsContext';
 import { getFontSizeClasses } from '@/utils/fontSizeClasses';
 
 const TIMER_VALUES = [15, 30, 60, 90, 120];
-const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
+const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard', 'ultimate'];
 
 const CONTENT_MODES = [
     { id: 'quotes', label: 'quotes' },
@@ -15,11 +15,12 @@ const CONTENT_MODES = [
 ];
 
 // When content mode is 'code', difficulty buttons are replaced with language selectors.
-// The difficulty value still uses easy/medium/hard; labels show the language name.
+// The difficulty value still uses easy/medium/hard/ultimate; labels show the language name.
 const CODE_LANGUAGES = [
     { difficulty: 'easy', label: 'js' },
     { difficulty: 'medium', label: 'python' },
     { difficulty: 'hard', label: 'sql' },
+    { difficulty: 'ultimate', label: 'c++' },
 ];
 
 /**
