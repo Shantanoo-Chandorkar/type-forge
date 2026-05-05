@@ -12,7 +12,7 @@ type-forge is a minimalist, keyboard-first typing speed test with no accounts, n
 
 - Real-time WPM, raw WPM, accuracy, error count, and consistency score
 - 6 content modes: quotes, words, punctuation, code, academic, and custom text input
-- 4 timer lengths: 15, 30, 60, and 120 seconds
+- 4 timer lengths: 15, 30, 60, 90, and 120 seconds
 - 3 difficulty levels: easy, medium, hard
 - Analytics dashboard with WPM trend chart, personal bests table, and per-key error heatmap
 - Post-test weakness analysis with targeted drill recommendations
