@@ -2,7 +2,7 @@
 import { useSettings } from '@/context/SettingsContext';
 import { getFontSizeClasses } from '@/utils/fontSizeClasses';
 
-const TIMER_VALUES = [15, 30, 60, 120];
+const TIMER_VALUES = [15, 30, 60, 90, 120];
 const DIFFICULTY_LEVELS = ['easy', 'medium', 'hard'];
 
 const CONTENT_MODES = [
