@@ -2,599 +2,484 @@
     "easy": [
         {
             "id": 1,
-            "quote": "Your heart is the size of an ocean. Go find yourself in its hidden depths.",
-            "author": "Rumi"
+            "quote": "The sun rose slowly over the quiet hills, casting long shadows across the empty road. A dog barked somewhere in the distance, then went silent. The morning air smelled of rain and fresh earth. Birds began to appear one by one, landing in the tall grass near the fence.",
+            "author": ""
+        },
+        {
+            "id": 2,
+            "quote": "She walked to the corner store every morning before the rest of the house woke up. It was only a few blocks, but she liked the quiet streets and the way the light looked before anyone had disturbed it. She always bought the same thing: a coffee and a small bag of sugar.",
+            "author": ""
         },
         {
             "id": 3,
-            "quote": "Thinking is the capital, Enterprise is the way, Hard Work is the solution.",
-            "author": "Abdul Kalam"
+            "quote": "The library was empty except for one old man sitting near the window. He had been coming here for forty years and always sat in the same chair. He never checked out any books. He just liked to read the paper and drink the free coffee they left out by the door.",
+            "author": ""
         },
         {
             "id": 4,
-            "quote": "If You Can't Make It Good, At Least Make It Look Good.",
-            "author": "Bill Gates"
+            "quote": "There was a small garden behind the school that nobody ever talked about. It had a few old fruit trees, some wild grass, and a wooden bench with one broken leg. In spring the trees bloomed and the whole yard smelled sweet for about two weeks before the petals fell.",
+            "author": ""
+        },
+        {
+            "id": 5,
+            "quote": "He learned to cook out of need more than interest. His mother had shown him a few things when he was young, but most of what he knew came from trial and error. By the time he was thirty, he could make five or six meals that people actually asked for again.",
+            "author": ""
         },
         {
             "id": 6,
-            "quote": "It is bad for a young man to sin; but it is worse for an old man to sin.",
-            "author": "Abu Bakr (R.A)"
+            "quote": "The train left on time for the first time in months. People looked up from their phones and at each other, as if something had gone wrong. It arrived early too, which caused a small problem at the other end because the platform staff were not ready. Nobody seemed to mind very much.",
+            "author": ""
         },
         {
             "id": 7,
-            "quote": "If You Are Out To Describe The Truth, Leave Elegance To The Tailor.",
-            "author": "Albert Einstein"
+            "quote": "Every year the town held a small fair in the park by the river. There were games for kids, food stalls, and a stage where local bands played. Most people came for the food. The pulled pork stand always had the longest line, starting before noon and stretching back past the old oak.",
+            "author": ""
         },
         {
             "id": 8,
-            "quote": "O man you are busy working for the world, and the world is busy trying to turn you out.",
-            "author": "Abu Bakr (R.A)"
+            "quote": "She kept a small notebook in her coat pocket and wrote in it whenever she thought of something. Not long entries, just a word or two to remind herself later. Most of what she wrote she never looked at again. But the act of writing it down made her feel better about forgetting.",
+            "author": ""
+        },
+        {
+            "id": 9,
+            "quote": "The cat had lived in the building for three years before anyone knew its name. The woman in apartment four called it Shadow, and somehow the name stuck. It slept on the stairs between the second and third floors and moved for no one. The building manager left food out every night just in case.",
+            "author": ""
         },
         {
             "id": 10,
-            "quote": "These Capitalists Generally Act Harmoniously And In Concert, To Fleece The People.",
-            "author": "Abraham Lincoln"
+            "quote": "They found the boat washed up on the beach early in the morning. There was no one on it, no name on the side, and no sign of where it had come from. The coast guard came out, looked it over for an hour, and left a report that nobody ever followed up on.",
+            "author": ""
         },
         {
             "id": 11,
-            "quote": "I Don't Believe In Failure. It Is Not Failure If You Enjoyed The Process.",
-            "author": "Oprah Winfrey"
+            "quote": "He had never been good at waiting. In offices he stood instead of sat, in queues he counted tiles and ceiling panels, and on phone calls he paced the room from end to end. His doctor said it was nothing, just energy with nowhere to go. He was not sure he agreed.",
+            "author": ""
         },
         {
             "id": 12,
-            "quote": "Do not get elated at any victory, for all such victory is subject to the will of God.",
-            "author": "Abu Bakr (R.A)"
+            "quote": "The road through the valley was narrow and had no markings on it. In winter it flooded twice and was closed for days at a time. In summer it baked and cracked and smelled of tar. Most people took the longer route around the hill, but a few of them still came this way.",
+            "author": ""
         },
         {
             "id": 13,
-            "quote": "Wear gratitude like a cloak and it will feed every corner of your life.",
-            "author": "Rumi"
+            "quote": "Her grandmother had grown up speaking two languages and never quite felt at home in either. When she was happy she spoke one, and when she was angry she switched to the other. As a child, the granddaughter learned to listen for the switch and act accordingly. It saved her a lot of trouble.",
+            "author": ""
         },
         {
             "id": 14,
-            "quote": "If you even dream of beating me you'd better wake up and apologize.",
-            "author": "Muhammad Ali"
+            "quote": "The old cinema closed down in the spring. People said it had been coming for years, but still it was a surprise when the doors actually shut and the sign came down. A bakery opened in the same space six months later. It was nice, but it was not the same kind of nice.",
+            "author": ""
         },
         {
             "id": 15,
-            "quote": "I Will Praise Any Man That Will Praise Me.",
-            "author": "William Shakespeare"
+            "quote": "He worked at the fish market for twelve years and never once got used to the smell. Every morning he woke up already bracing for it, and every evening he stood in the shower longer than was probably necessary. His wife said she could smell it in his dreams. He believed her.",
+            "author": ""
         },
         {
             "id": 16,
-            "quote": "One Of The Greatest Diseases Is To Be Nobody To Anybody.",
-            "author": "Mother Teresa"
+            "quote": "The two brothers had not spoken in eleven years. Their mother kept hoping they would sort it out, but she had learned not to say so. When she died, they stood on opposite sides of the grave and did not look at each other. On the drive home, one of them called the other.",
+            "author": ""
+        },
+        {
+            "id": 17,
+            "quote": "She grew the best tomatoes on the street and gave most of them away. She did not do it to be liked, she just liked growing them more than eating them. Her neighbor made sauce from whatever she left on the doorstep and sometimes left a jar in return. Neither ever mentioned it.",
+            "author": ""
         },
         {
             "id": 18,
-            "quote": "People Must Learn To Hate And If They Can Learn To Hate, They Can Be Taught To Love.",
-            "author": "Nelson Mandela"
+            "quote": "The small town had one stoplight and it blinked yellow most of the day. Nobody seemed to know who was responsible for fixing it or whether it needed to be fixed. Cars slowed and crept through without stopping. After a while it felt so normal that visitors were the only ones who noticed.",
+            "author": ""
+        },
+        {
+            "id": 19,
+            "quote": "He had a habit of saving small things: bottle caps, ticket stubs, old receipts from places that no longer existed. He did not collect them, exactly. He just could not bring himself to throw them out. His daughter found three boxes of them after he died and spent a whole afternoon going through each one.",
+            "author": ""
         },
         {
             "id": 20,
-            "quote": "The less of the World, the freer you live.",
-            "author": "Umar ibn Al-Khatt\u0101b (R.A)"
+            "quote": "The post office stood on the corner where it had always stood. Inside it smelled of old paper and something else that nobody could name. The same woman had worked the counter for as long as anyone could remember. She knew most people by name and their usual order of business before they spoke.",
+            "author": ""
         },
         {
             "id": 21,
-            "quote": "Respond to every call that excites your spirit.",
-            "author": "Rumi"
+            "quote": "They built the playground while the kids were still in school and finished it over a long weekend. On Monday morning the children came out for break and stopped dead at the door. There was a pause, then one kid ran for the swings, and the rest followed all at once.",
+            "author": ""
         },
         {
             "id": 22,
-            "quote": "The Way To Get Started Is To Quit Talking And Begin Doing.",
-            "author": "Walt Disney"
+            "quote": "The beach in winter was nothing like the beach in summer. The same sand, the same sea, but somehow a completely different place. Fewer people, colder air, longer stretches of empty shore. She preferred it this way. She walked the length of it twice, ate her lunch on a rock, and went home.",
+            "author": ""
         },
         {
             "id": 23,
-            "quote": "God Doesn't Require Us To Succeed, He Only Requires That You Try.",
-            "author": "Mother Teresa"
+            "quote": "He started writing the letter three times and stopped each time before the second sentence. By the fourth attempt he decided to call instead. She did not pick up. He left a message, said what he needed to say in about thirty seconds, and felt immediately better than he had in weeks.",
+            "author": ""
+        },
+        {
+            "id": 24,
+            "quote": "The river ran low that summer, lower than the old-timers could recall. You could see the tops of rocks that were normally deep under water, and kids walked out to the middle in knee-high boots. Some people found old coins and lost fishing gear. One person found a ring with an inscription inside.",
+            "author": ""
         },
         {
             "id": 25,
-            "quote": "Happiness comes towards those which believe in him.",
-            "author": "Ali ibn Abi Talib (R.A)"
-        },
-        {
-            "id": 27,
-            "quote": "When I am silent, I have thunder hidden inside.",
-            "author": "Rumi"
-        },
-        {
-            "id": 28,
-            "quote": "Technological Progress Is Like An Axe In The Hands Of A Pathological Criminal.",
-            "author": "Albert Einstein"
-        },
-        {
-            "id": 31,
-            "quote": "The End Of Life Is To Be Like God, And The Soul Following God Will Be Like Him.",
-            "author": "Socrates"
-        },
-        {
-            "id": 32,
-            "quote": "Let us sacrifice our today so that our children can have a better tomorrow.",
-            "author": "Abdul Kalam"
-        },
-        {
-            "id": 34,
-            "quote": "In every religion there is love, yet love has no religion.",
-            "author": "Rumi"
-        },
-        {
-            "id": 35,
-            "quote": "Everything in the universe is within you. Ask all from yourself.",
-            "author": "Rumi"
-        },
-        {
-            "id": 37,
-            "quote": "What Do I Wear In Bed? Why, Chanel No. 5, Of Course.",
-            "author": "Marilyn Monroe"
-        },
-        {
-            "id": 38,
-            "quote": "A Good Head And A Good Heart Are Always A Formidable Combination.",
-            "author": "Nelson Mandela"
-        },
-        {
-            "id": 39,
-            "quote": "The Soul Never Thinks Without A Picture.",
-            "author": "Aristotle"
-        },
-        {
-            "id": 42,
-            "quote": "If You Like Your Brother And He's Prospering, You'll Be Pleased For Him.",
-            "author": "Hamad Bin Isa Al Khalifa"
-        },
-        {
-            "id": 43,
-            "quote": "Success Is Dependent Upon The Glands - Sweat Glands.",
-            "author": "Zig Ziglar"
-        },
-        {
-            "id": 46,
-            "quote": "Applause Waits On Success.",
-            "author": "Benjamin Franklin"
-        },
-        {
-            "id": 47,
-            "quote": "Just As Courage Imperils Life, Fear Protects It.",
-            "author": "Leonardo Da Vinci"
-        },
-        {
-            "id": 48,
-            "quote": "It's Better To Be A Lion For A Day Than A Sheep All Your Life.",
-            "author": "Elizabeth Kenny"
-        },
-        {
-            "id": 49,
-            "quote": "The Devil's Voice Is Sweet To Hear.",
-            "author": "Stephen King"
-        },
-        {
-            "id": 50,
-            "quote": "Sometimes the people with the worst past, create the best future.",
-            "author": "Umar ibn Al-Khatt\u0101b (R.A)"
-        },
-        {
-            "id": 51,
-            "quote": "Every day, nay every moment, try to do some good deed.",
-            "author": "Abu Bakr (R.A)"
-        },
-        {
-            "id": 52,
-            "quote": "No Matter What People Tell You, Words And Ideas Can Change The World.",
-            "author": "Robin Williams"
-        },
-        {
-            "id": 56,
-            "quote": "The best revenge is to improve yourself.",
-            "author": "Ali ibn Abi Talib (R.A)"
-        },
-        {
-            "id": 57,
-            "quote": "God gave me this illness to remind me that I'm not Number One; He is.",
-            "author": "Muhammad Ali"
-        },
-        {
-            "id": 59,
-            "quote": "When You Have Really Exhausted An Experience You Always Reverence And Love It.",
-            "author": "Albert Camus"
-        },
-        {
-            "id": 60,
-            "quote": "Now you see me, now you don't. George thinks he will, but I know he won't!",
-            "author": "Muhammad Ali"
-        },
-        {
-            "id": 61,
-            "quote": "Elegance Does Not Consist In Putting On A New Dress.",
-            "author": "Coco Chanel"
-        },
-        {
-            "id": 63,
-            "quote": "Eating Words Has Never Given Me Indigestion.",
-            "author": "Winston Churchill"
-        },
-        {
-            "id": 65,
-            "quote": "It's not bragging if you can back it up.",
-            "author": "Muhammad Ali"
-        },
-        {
-            "id": 66,
-            "quote": "I Wish People Would Love Everybody Else The Way They Love Me. It Would Be A Better World.",
-            "author": "Muhammad Ali"
-        },
-        {
-            "id": 68,
-            "quote": "Words Are Only Painted Fire; A Look Is The Fire Itself.",
-            "author": "Mark Twain"
-        },
-        {
-            "id": 69,
-            "quote": "Words, Without Power, Is Mere Philosophy.",
-            "author": "Muhammad Iqbal"
-        },
-        {
-            "id": 70,
-            "quote": "The cure for pain is in the pain.",
-            "author": "Rumi"
-        },
-        {
-            "id": 71,
-            "quote": "Whatever happens, just keep smiling and lose yourself in Love.",
-            "author": "Rumi"
-        },
-        {
-            "id": 72,
-            "quote": "Do The Right Thing. It Will Gratify Some People And Astonish The Rest.",
-            "author": "Mark Twain"
-        },
-        {
-            "id": 73,
-            "quote": "Only the soul knows what love is.",
-            "author": "Rumi"
-        },
-        {
-            "id": 74,
-            "quote": "Earning of livelihood by following some profession is better than living on charity.",
-            "author": "Umar ibn Al-Khatt\u0101b (R.A)"
-        },
-        {
-            "id": 75,
-            "quote": "Burdens are the foundations of ease and bitter things the forerunners of pleasure.",
-            "author": "Rumi"
-        },
-        {
-            "id": 76,
-            "quote": "Too Many Have Dispensed With Generosity In Order To Practice Charity.",
-            "author": "Albert Camus"
-        },
-        {
-            "id": 77,
-            "quote": "Even the greatest was once a beginner. Don't be afraid to take that first step.",
-            "author": "Muhammad Ali"
-        },
-        {
-            "id": 78,
-            "quote": "No Great Intellectual Thing Was Ever Done By Great Effort.",
-            "author": "Theodore Roosevelt"
-        },
-        {
-            "id": 79,
-            "quote": "To fight against one's desires is the greatest of all fights.",
-            "author": "Ali ibn Abi Talib (R.A)"
-        },
-        {
-            "id": 80,
-            "quote": "Innovation Distinguishes Between A Leader And A Follower.",
-            "author": "Steve Jobs"
-        },
-        {
-            "id": 81,
-            "quote": "We Enjoy The Process Far More Than The Proceeds.",
-            "author": "Warren Buffett"
-        },
-        {
-            "id": 82,
-            "quote": "When I Started Counting My Blessings, My Whole Life Turned Around.",
-            "author": "Willie Nelson"
-        },
-        {
-            "id": 84,
-            "quote": "All My Life I've Looked At Words As Though I Were Seeing Them For The First Time.",
-            "author": "Ernest Hemingway"
-        },
-        {
-            "id": 86,
-            "quote": "Never Allow Someone To Be Your Priority While Allowing Yourself To Be Their Option.",
-            "author": "Mark Twain"
-        },
-        {
-            "id": 87,
-            "quote": "To Jaw-Jaw Is Always Better Than To War-War.",
-            "author": "Winston Churchill"
-        },
-        {
-            "id": 88,
-            "quote": "That's The Real Trouble With The World, Too Many People Grow Up",
-            "author": "Walt Disney"
-        },
-        {
-            "id": 89,
-            "quote": "It Is Easier To Stay Out Than Get Out.",
-            "author": "Mark Twain"
-        },
-        {
-            "id": 90,
-            "quote": "The worst man is the one who sees himself as the best.",
-            "author": "Muhammad Ali"
-        },
-        {
-            "id": 91,
-            "quote": "The World Breaks Everyone, And Afterward, Some Are Strong At The Broken Places.",
-            "author": "Ernest Hemingway"
-        },
-        {
-            "id": 92,
-            "quote": "Rule No.1: Never Lose Money. Rule No.2: Never Forget Rule No.1.",
-            "author": "Warren Buffett"
-        },
-        {
-            "id": 94,
-            "quote": "Whenever You Find Yourself On The Side Of The Majority, It Is Time To Pause And Reflect.",
-            "author": "Mark Twain"
-        },
-        {
-            "id": 95,
-            "quote": "Whatever Is Done For Love Always Occurs Beyond Good And Evil.",
-            "author": "Friedrich Nietzsche"
-        },
-        {
-            "id": 96,
-            "quote": "Things Should Be Made As Simple As Possible, But Not Any Simpler.",
-            "author": "Albert Einstein"
-        },
-        {
-            "id": 97,
-            "quote": "Stop acting so small. You are the universe in ecstatic motion.",
-            "author": "Rumi"
-        },
-        {
-            "id": 98,
-            "quote": "All Truth Is Simple... Is That Not Doubly A Lie?",
-            "author": "Friedrich Nietzsche"
+            "quote": "She had not been back to the house since she sold it. She drove past once, slowly, and saw that someone had painted the front door red. The garden was different too, neater and more arranged. She was glad someone was taking care of it. She did not stop or slow down again.",
+            "author": ""
         }
     ],
     "medium": [
         {
+            "id": 1,
+            "quote": "There's a particular kind of tired that comes from spending too much time being careful around other people. It isn't the tiredness of hard work or long hours. It's the weariness of choosing every word, reading every room, and staying just a few degrees away from whatever you actually feel. By the end of most days she was exhausted from things that no one could see.",
+            "author": ""
+        },
+        {
             "id": 2,
-            "quote": "The Bay of Bengal is hit frequently by cyclones. The months of November and May, in particular, are dangerous in this regard.",
-            "author": "Abdul Kalam"
+            "quote": "When he was young, he believed that knowing things was the same as understanding them. He collected facts the way other children collected cards and was proud of how many he could recite at any given moment. It took him many years to realize that knowing a fact and sitting with its meaning long enough to let it actually change you are two entirely different acts.",
+            "author": ""
+        },
+        {
+            "id": 3,
+            "quote": "The thing about grief is that it doesn't arrive all at once. It comes in pieces, sometimes years apart, and often at moments that seem completely unrelated to the loss. A song on the radio, an old coat found at the back of a wardrobe, a name mentioned in passing. You don't mourn the person. You mourn them again and again, in different shapes, for the rest of your life.",
+            "author": ""
+        },
+        {
+            "id": 4,
+            "quote": "Some people are drawn to cities because of what they contain, but she had come here because of what they allowed. In a city you could be a stranger every single day if you chose. Nobody expected you at a particular time, or remembered whether you'd been there last week, or asked about your family. That kind of anonymity wasn't loneliness. She had always found it closer to freedom.",
+            "author": ""
         },
         {
             "id": 5,
-            "quote": "Heart be brave. If you cannot be brave, just go. Love's glory is not a small thing.",
-            "author": "Rumi"
+            "quote": "She had read somewhere that the average person changes careers three times in a life, and she had clung to that number like a lifeline for most of her thirties. She wasn't lost, she told herself. She was just on the second one. The problem was that she was still waiting to figure out what the third one would be, and she had turned forty the previous spring.",
+            "author": ""
+        },
+        {
+            "id": 6,
+            "quote": "Every conversation he'd ever had about money had left him feeling vaguely ashamed, and he'd never been able to work out exactly why. He'd grown up without much, spent most of his adult life without much more, and somewhere along the way he'd internalized the idea that wanting things was a character flaw. His therapist had been working to unravel this for a couple of years with modest progress.",
+            "author": ""
+        },
+        {
+            "id": 7,
+            "quote": "The neighborhood had changed so much in a decade that she sometimes felt she was walking through a city she'd read about rather than lived in. The coffee shops were different, the grocery store was gone, the park had new benches and a new path that cut across where the old climbing frame used to stand. The kids who had grown up here wouldn't recognize it. Neither, really, did she.",
+            "author": ""
+        },
+        {
+            "id": 8,
+            "quote": "He wasn't sure when the habit of lying about small things had started, but by the time he noticed it he'd been doing it for years. Not about anything important. Just the minor adjustments everyone makes: the arrival time that was slightly earlier than it was, the enthusiasm he hadn't quite felt. The problem was that over time it had made him uncertain about what he actually thought about anything.",
+            "author": ""
         },
         {
             "id": 9,
-            "quote": "While children are struggling to be unique, the world around them is trying all means to make them look like everybody else.",
-            "author": "Abdul Kalam"
+            "quote": "The best thing about teaching, she'd decided, was the way a single lesson could contain every emotion available to a human being. In the space of one hour you could feel proud, frustrated, genuinely delighted, bored, irritated, and moved, sometimes in that exact order. Most days ended with her not entirely sure how she felt. She had come to understand this as the job working as it was supposed to.",
+            "author": ""
+        },
+        {
+            "id": 10,
+            "quote": "He had made a decision years ago not to keep things just because he'd had them for a long time. A chipped mug was a chipped mug. A jacket that didn't fit wasn't made better by belonging to him for a decade. His friends called it cold-blooded. He called it clarity. The drawer where he kept things he wasn't sure about had been empty for years.",
+            "author": ""
+        },
+        {
+            "id": 11,
+            "quote": "You learn things about people in airports that you wouldn't learn anywhere else. The way someone carries their bag, whether they queue early or late, what they choose to eat at seven in the morning, how they talk to strangers they'll never see again. She had spent years traveling for work and believed she could tell you everything essential about a person just from watching them check in.",
+            "author": ""
+        },
+        {
+            "id": 12,
+            "quote": "The meal had been her grandmother's recipe, passed down through instructions that had never been written anywhere. She'd learned it by watching, the same way her grandmother had learned it from hers, and the measurements were all in gestures rather than amounts. A handful of this. Enough of that. She had made it every year for twenty years and still wasn't entirely sure she was doing it right.",
+            "author": ""
+        },
+        {
+            "id": 13,
+            "quote": "He had spent so long preparing for a future that hadn't arrived yet that he was no longer sure he knew how to live in the present. He'd saved, planned, held back, deferred. Waiting for the right moment had become such a comfortable habit that when the right moment finally came, he almost didn't recognize it. He almost let it pass, the way he'd let so many others pass before.",
+            "author": ""
+        },
+        {
+            "id": 14,
+            "quote": "The letter arrived six months after she'd expected it and changed nothing about the situation it described. By then the problem had resolved itself, the decision had been made without the information the letter contained, and the people involved had moved on to other things. She read it anyway, carefully, twice, and then put it in the drawer where she kept things that mattered but no longer required action.",
+            "author": ""
+        },
+        {
+            "id": 15,
+            "quote": "They had built the friendship around a shared dislike of a third person, which was not a particularly strong foundation. When that person moved away and was no longer available to be discussed, they found they didn't have much else to say to each other. This surprised them both, because they'd always assumed the problem was the other person. It turned out the problem had also been them.",
+            "author": ""
+        },
+        {
+            "id": 16,
+            "quote": "She had always thought of herself as someone who adapted easily to change. Then her routine was disrupted for three days by a broken boiler, and she discovered that what she'd mistaken for adaptability was actually a deep investment in things staying exactly as they were. The disruption was minor. Her reaction to it, she had to admit, was not. She thought about that for a while afterwards.",
+            "author": ""
         },
         {
             "id": 17,
-            "quote": "I'm so fast that last night I turned off the light switch in my hotel room and was in bed before the room was dark.",
-            "author": "Muhammad Ali"
+            "quote": "He kept meaning to have the conversation with his son and kept finding reasons not to. There was never a good time; the boy was tired, or he was tired, or the evening was pleasant enough that introducing a difficult subject seemed wrong. By the time he finally did it, what had begun as a small thing had grown heavy from being carried around for so long.",
+            "author": ""
+        },
+        {
+            "id": 18,
+            "quote": "There's a version of bravery that gets all the attention, and another kind that almost nobody talks about. The first is dramatic: running into burning buildings, speaking in front of thousands, making the impossible decision under pressure. The second is quieter: showing up to the same ordinary life day after day, without the promise of recognition or the comfort of a narrative that explains why it matters.",
+            "author": ""
         },
         {
             "id": 19,
-            "quote": "Everyone has been made for some particular work, and the desire for that work has been put in every heart.",
-            "author": "Rumi"
+            "quote": "The photograph had been sitting in the same place on the same shelf for so many years that she'd stopped seeing it. Then one afternoon her niece picked it up and asked who the people in it were, and she had to look at it properly for the first time in probably two decades. It was strange how much she'd forgotten, and stranger still how much came back all at once.",
+            "author": ""
+        },
+        {
+            "id": 20,
+            "quote": "He had read enough history to know that the idea of a better past was almost always wrong, and enough of it to know that knowing this didn't help at all. The logic was clear. The feeling persisted regardless. He understood this to be one of the fundamental indignities of being a person: that the rational mind and the emotional one rarely read from the same page.",
+            "author": ""
+        },
+        {
+            "id": 21,
+            "quote": "Most of the important conversations of her life had happened in cars. She didn't know why cars were like that. Maybe it was easier to say hard things when you weren't looking directly at each other. Maybe the movement made stillness possible in a different way. Whatever the reason, more than a few things that needed to be said had finally been said on the way somewhere else entirely.",
+            "author": ""
+        },
+        {
+            "id": 22,
+            "quote": "She had spent years being the kind of person who apologized for things that weren't her fault, and now she was trying to stop. The habit was deep, though. It had started as a social reflex and become something more structural. She apologized for the weather. She apologized when people bumped into her. Her therapist said it was about permission. She wasn't yet sure permission for what, exactly.",
+            "author": ""
+        },
+        {
+            "id": 23,
+            "quote": "The house he'd grown up in had been sold three times since his family left it, and each new owner had changed something. The kitchen was now different. The back bedroom had become an office. Someone had knocked down the wall between the two rooms at the front and made one large one. He didn't mind the changes. What he minded was how little he could now picture the original.",
+            "author": ""
         },
         {
             "id": 24,
-            "quote": "Speak any language, Turkish, Greek, Persian, Arabic, but always speak with love.",
-            "author": "Rumi"
+            "quote": "Most of the time he was fine. He'd say this to people who asked, and mean it, and it was true. Most of the time he was genuinely fine. But there were particular hours of particular days when it wasn't true at all, and in those hours he'd learned it was better not to be around other people. He'd gotten good at knowing when those hours were coming.",
+            "author": ""
         },
         {
-            "id": 26,
-            "quote": "Knowledge is of two kinds: that which is absorbed and that which is heard. And that which is heard does not profit if it is not absorbed.",
-            "author": "Ali ibn Abi Talib (R.A)"
-        },
-        {
-            "id": 29,
-            "quote": "No One Would Choose A Friendless Existence On Condition Of Having All The Other Things In The World.",
-            "author": "Aristotle"
-        },
-        {
-            "id": 33,
-            "quote": "Your task is not to seek for love, but merely to seek and find all the barriers within yourself that you have built against it.",
-            "author": "Rumi"
-        },
-        {
-            "id": 36,
-            "quote": "I'm not a handsome guy, but I can give my hand to someone who needs help. Beauty is in the heart, not in the face.",
-            "author": "Abdul Kalam"
-        },
-        {
-            "id": 41,
-            "quote": "Let the beauty we love be what we do. There are hundreds of ways to kneel and kiss the ground.",
-            "author": "Rumi"
-        },
-        {
-            "id": 44,
-            "quote": "Champions are not generated from the championship. Champion is generated from something they have in them, desires, dreams, and visions.",
-            "author": "Muhammad Ali"
-        },
-        {
-            "id": 45,
-            "quote": "No matter what is the environment around you, it is always possible to maintain your brand of integrity.",
-            "author": "Abdul Kalam"
-        },
-        {
-            "id": 53,
-            "quote": "Champions have to have the skill and the will. But the will must be stronger than the skill.",
-            "author": "Muhammad Ali"
-        },
-        {
-            "id": 54,
-            "quote": "Men Occasionally Stumble Over The Truth, But Most Of Them Pick Themselves Up And Hurry Off As If Nothing Had Happened.",
-            "author": "Winston Churchill"
-        },
-        {
-            "id": 55,
-            "quote": "Goodbyes are only for those who love with their eyes. Because for those who love with heart and soul there is no such thing as separation.",
-            "author": "Rumi"
-        },
-        {
-            "id": 58,
-            "quote": "Success Is A Personal Standard, Reaching For The Highest That Is In Us, Becoming All That We Can Be.",
-            "author": "Zig Ziglar"
-        },
-        {
-            "id": 62,
-            "quote": "It Is Always Consoling To Think Of Suicide: In That Way One Gets Through Many A Bad Night.",
-            "author": "Friedrich Nietzsche"
-        },
-        {
-            "id": 64,
-            "quote": "India has to be transformed into a developed nation, a prosperous nation and a healthy nation, with a value system.",
-            "author": "Abdul Kalam"
-        },
-        {
-            "id": 67,
-            "quote": "Why do I want my wife to show off her panties when the wind blows? Horses show their behinds, and cows and mules, not humans.",
-            "author": "Muhammad Ali"
-        },
-        {
-            "id": 83,
-            "quote": "This being human is a guest house. Every morning a new arrival. Welcome and entertain them all!",
-            "author": "Rumi"
-        },
-        {
-            "id": 85,
-            "quote": "Waiting Is Painful. Forgetting Is Painful. But Not Knowing Which To Do Is The Worse Kind Of Suffering.",
-            "author": "Paulo Coelho"
-        },
-        {
-            "id": 93,
-            "quote": "Convergence of our views on global trade issues under the WTO and our common resolve to combat terrorism provide a valuable base for mutual understanding.",
-            "author": "Abdul Kalam"
-        },
-        {
-            "id": 99,
-            "quote": "Money Is Only A Tool. It Will Take You Wherever You Wish, But It Will Not Replace You As The Driver.",
-            "author": "Ayn Rand"
-        },
-        {
-            "id": 100,
-            "quote": "The fight is won or lost far away from witnesses - behind the lines, in the gym, and out there on the road, long before I dance under those lights.",
-            "author": "Muhammad Ali"
+            "id": 25,
+            "quote": "She didn't think of herself as a patient person, but she'd learned to appear patient, which turned out to be almost as useful. The appearance of patience bought time, and time usually sorted things out in one way or another. People mistook her calm for wisdom, which was fine. She wasn't going to correct them. She had noticed that being underestimated often worked better than being known.",
+            "author": ""
         }
     ],
     "hard": [
         {
-            "id": 30,
-            "quote": "Life is a gamble. You can get hurt, but people die in plane crashes, lose their arms and legs in car accidents; people die every day. Same with fighters: some die, some get hurt, some go on. You just don't let yourself believe it will happen to you.",
-            "author": "Muhammad Ali"
+            "id": 1,
+            "quote": "The oak had been in the yard so long that the family had stopped thinking of it as a tree and started thinking of it as a permanent condition of the house — like the slope of the roof or the way the back door stuck in damp weather. The children had grown up measuring themselves against it, pressing their shoulders to the bark and reaching for whatever mark they'd made the year before. Now the arborist was saying it needed to come down. Something in the roots; something about the soil that had gone wrong without showing on the surface. The father stood in the yard a long time after the arborist left, hands in his pockets, saying nothing, looking at the tree that had always just been there.",
+            "author": ""
         },
         {
-            "id": 40,
-            "quote": "In your light I learn how to love. In your beauty, how to make poems. You dance inside my chest where no-one sees you, but sometimes I do, and that sight becomes this art.",
-            "author": "Rumi"
+            "id": 2,
+            "quote": "She had come to think of memory as a collection of slightly wrong photographs — images that felt accurate until you looked at them carefully, at which point all the details turned out to be rearranged. The colour of the kitchen in the house she'd grown up in. The sequence of rooms in the apartment she'd shared at twenty-two. The face of a teacher she'd adored. The more she examined these things, the less she trusted them, and the less she trusted them, the more she understood that what she'd been carrying around for forty years wasn't the past — it was her relationship with it, something she'd been editing continuously without noticing.",
+            "author": ""
         },
         {
-            "quote": "The impediment to action advances action. What stands in the way becomes the way.",
-            "author": "Marcus Aurelius"
+            "id": 3,
+            "quote": "The station was almost empty at this hour: a cleaner moving slowly along the far platform, a young man asleep across two seats with his coat pulled over his face, a woman eating something from a paper bag with the deliberate economy of someone who didn't care who was watching. He had been here many times before, always waiting, always going somewhere he wasn't sure he wanted to go. There was something about stations — the specific quality of their emptiness, the way they made everything feel provisional and unattached — that he found both melancholy and quietly freeing, as if by being in transit he was permitted, for a few minutes, to be nobody in particular.",
+            "author": ""
         },
         {
-            "quote": "It is not that I am so smart, but I stay with the questions much longer.",
-            "author": "Albert Einstein"
+            "id": 4,
+            "quote": "There's a moment in every long project — a novel, a renovation, a friendship, a career — where the enthusiasm of the beginning has died away and the reward of the ending is still too far off to be felt, and what remains is just the daily middle: the showing up without any particular reason to, the small choices that don't feel consequential but add up to everything. She had come to believe that this middle was where character was actually formed — not in the dramatic moments that made good stories, but in the ordinary persistence that almost never did. Most people, she thought, were braver than they knew; they just weren't doing it somewhere anyone could see.",
+            "author": ""
         },
         {
-            "quote": "The most common way people give up their power is by thinking they do not have any.",
-            "author": "Alice Walker"
+            "id": 5,
+            "quote": "The town they'd grown up in had the particular quality of a place that had once expected more from itself. There were wide boulevards without enough traffic to fill them, a theatre that showed two films a week to dwindling audiences, a main street with too many empty windows and too few new ones. He had left at eighteen and felt guilty about leaving ever since — not because he missed it, exactly, but because his departure had felt like part of the slow vote against the place that everyone who could leave seemed eventually to cast. He still came back at Christmas. He still found it hard to say anything honest about it when people asked.",
+            "author": ""
         },
         {
-            "quote": "We must be willing to let go of the life we planned so as to have the life that is waiting for us.",
-            "author": "Joseph Campbell"
+            "id": 6,
+            "quote": "He was the kind of person who seemed, on the surface, to require very little — content with small rooms, cheap meals, a single shelf of books read and reread until the spines gave way. His colleagues assumed this was a form of discipline; a few admired it openly. What they couldn't see was that behind the frugality there was no particular philosophy, only a longstanding inability to want things with any conviction. He had tried, at various points in his life, to care deeply about something — a place, a person, a project — and each time the caring had faded before it could become permanent, leaving him unsure whether the problem was the things he'd chosen or something more fundamental about how he was built.",
+            "author": ""
         },
         {
-            "quote": "You do not rise to the level of your goals, you fall to the level of your systems.",
-            "author": "James Clear"
+            "id": 7,
+            "quote": "The letter had been sitting in the drawer for eleven years. She hadn't burned it, hadn't thrown it away, hadn't moved it to a different drawer — hadn't done anything with it except occasionally open the drawer and look at it, as if the act of not destroying it constituted a kind of response. Her daughter had asked once, years ago, what was in the drawer. She had said old papers. This was technically true. When she finally read the letter again, in the lamplight of a winter evening with a glass of wine on the table beside her, she was surprised to find it said less than she remembered — that all those years of weight had been carried by a page and a half of ordinary sentences.",
+            "author": ""
         },
         {
-            "quote": "The secret of getting ahead is getting started. The secret of getting started is breaking your complex, overwhelming tasks into small, manageable ones.",
-            "author": "Mark Twain"
+            "id": 8,
+            "quote": "The market had been there for so long that nobody remembered when it started, or who had first set up a stall on the corner by the church. In winter it ran from just past seven until noon; in summer it spread further along the street and lasted until two. You could tell the season by what was on the tables — root vegetables and heavy jars in the cold months, then a slow brightening as spring came, until by July the whole street smelled of cut flowers and warm bread. The vendors knew each other's names, knew each other's children's names, gave each other's regulars the same price. It was an economy that ran on familiarity, and it had survived four decades of supermarkets opening and closing nearby without appearing to notice.",
+            "author": ""
         },
         {
-            "quote": "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.",
-            "author": "Antoine de Saint-Exupery"
+            "id": 9,
+            "quote": "There is a particular kind of exhaustion that comes not from doing too much, but from explaining yourself too often. She had spent years in jobs and relationships where the energy she spent justifying how she worked, how she thought, how she processed the world was greater than the energy she spent on the work itself. By the time she found the position she eventually stayed in for two decades, she had already learned the most useful thing she would ever learn professionally: that the right environment doesn't ask you to explain your instincts. It either trusts them or it doesn't, and if it doesn't, no amount of explanation will substitute for that trust — you are only delaying an outcome that was already decided.",
+            "author": ""
         },
         {
-            "quote": "It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.",
-            "author": "Charles Darwin"
+            "id": 10,
+            "quote": "The funeral had gone well, by the measures people use for funerals. The service was short. The readings were good. The woman who sang had a voice that made several people in the back row cry, which seemed appropriate. Afterwards there was food in the hall next door, and people stood around holding plates and talking about the dead man in the way that people talk about the dead at these events — with a generosity and warmth that the living man had rarely received while he was alive. His brother noticed this but said nothing. He had noticed it at other funerals too, and had come to believe it was simply the nature of grief to make people more honest about what a person had been worth — too late to matter, but honest.",
+            "author": ""
         },
         {
-            "quote": "A person who never made a mistake never tried anything new. The measure of intelligence is the ability to change.",
-            "author": "Albert Einstein"
+            "id": 11,
+            "quote": "The archive occupied the top two floors of a building that had once been something else — a warehouse, probably, judging from the ceiling height and the way light came through windows that were too high and too narrow for anything designed to be pleasant. The shelves ran floor to ceiling and were catalogued in a system that predated computers by several decades; one of the archivists knew it in full, and two others understood parts of it, and there were things on the higher shelves that had not been retrieved in years and that nobody was certain anyone had ever actually read. It was the kind of place that made her feel, every morning she came in, that knowledge was mostly a matter of things not yet lost.",
+            "author": ""
         },
         {
-            "quote": "We suffer more often in imagination than in reality. Hang on to what you have; it is enough.",
-            "author": "Seneca"
+            "id": 12,
+            "quote": "He had been a doctor for thirty years and in all that time had never become comfortable with what he called the translation problem: the gap between what a patient described and what was actually happening inside them, between the story of illness and the biology of it. People came in with their symptoms narrated in the language available to them — a heaviness, a pulling feeling, something that wasn't quite pain but wasn't not pain either — and his job was to read through the imprecision to whatever lay beneath it. He was good at it, usually. But there were cases where the story and the scan told different things, and in those cases he had learned to trust the story, because the scan could only see what it was designed to see.",
+            "author": ""
         },
         {
-            "quote": "Do not go where the path may lead, go instead where there is no path and leave a trail.",
-            "author": "Ralph Waldo Emerson"
+            "id": 13,
+            "quote": "The city changed slowly enough that you could miss it if you weren't paying close attention, and fast enough that if you left for even a few years and came back, whole streets had reorganized themselves around an absence you couldn't quite name. Cafes where she'd spent whole afternoons had become phone shops; the phone shops had become cafes of a different kind. The building where she'd had her first proper job had been re-clad in glass and renamed. Only the topography was stable — the rise of the hill, the angle of the streets as they ran down toward the water — and even that had been altered in places, levelled and made convenient, the awkward parts smoothed away until the city felt less like somewhere that had grown and more like somewhere that had been decided.",
+            "author": ""
         },
         {
-            "quote": "The universe is under no obligation to make sense to you. Question everything, accept nothing without evidence.",
-            "author": "Neil deGrasse Tyson"
+            "id": 14,
+            "quote": "The first winter she spent alone in the house, she found herself developing small rituals that she hadn't had before. She made her coffee in a particular order and drank it at the same chair every morning. She closed the bedroom door at night even though there was nobody else in the house. She left the radio on during dinner, not for any programme in particular but for the texture of voices — the way they made the room feel occupied. These were not compensations for loneliness, she decided: they were simply the shape that her life took when there was nobody else's habits pressing against it. She was, she realized with something close to surprise, content. Not happy, necessarily. Content.",
+            "author": ""
         },
         {
-            "quote": "Knowing is not enough; we must apply. Willing is not enough; we must do.",
-            "author": "Johann Wolfgang von Goethe"
+            "id": 15,
+            "quote": "The book had been lent to him so long ago that both he and the person who lent it had forgotten about it entirely. When he found it while packing up his study — the same study he'd been in for fifteen years, accumulating a sediment of books and papers that he'd stopped seeing — he recognized it immediately. There was her name on the inside cover in her particular handwriting, the same handwriting that appeared in the stack of letters he'd kept in a shoebox on the top shelf of the wardrobe. He turned it over a few times, read a page at random, then put it in the box marked for charity without letting himself think about it any further. Some things resolved better with momentum than with deliberation.",
+            "author": ""
         },
         {
-            "quote": "An unexamined life is not worth living. The first step to wisdom is admitting what you do not know.",
-            "author": "Socrates"
+            "id": 16,
+            "quote": "Rain in the city arrived differently depending on the season. In summer it came fast and warm, hammering the pavements and raising a smell from them that was half petrichor and half something more industrial. In autumn it settled in for days at a time, a patient, steady seepage that crept under collars and into shoes and made the city feel exhausted. In winter it turned to sleet at the edges of the night and left the streets glassed in the morning. She had a theory that you could only understand a city by experiencing it in all its weathers, in the same way you could only understand a person by seeing how they behaved when things were going wrong. Fair weather showed you the version people wanted to be; the rest showed you what was actually there.",
+            "author": ""
         },
         {
-            "quote": "You will continue to suffer if you have an emotional reaction to everything that is said to you. True power is sitting back and observing.",
-            "author": "Warren Buffett"
+            "id": 17,
+            "quote": "He had spent twenty years in the same office and in that time had acquired so many things — pens, mugs, a plant that had survived three different assistants, framed photographs of children who were now adults — that when the day came to clear it out, he had no idea where most of it had come from. He filled four boxes and then stood looking at the blank desk and the bare walls and felt something he hadn't expected to feel: not grief exactly, and not nostalgia, but a strange lightness, as if the accumulation had been a kind of weight he hadn't noticed he was carrying. He left the plant for whoever came next. It had outlived enough people already.",
+            "author": ""
         },
         {
-            "quote": "Most of the important things in the world have been accomplished by people who have kept on trying when there seemed to be no hope at all.",
-            "author": "Dale Carnegie"
+            "id": 18,
+            "quote": "She had always been better in letters than in person — more precise, more honest, more willing to say the thing rather than circle it. Over the years she had written letters that explained things she hadn't been able to explain face to face, that repaired things she hadn't been able to repair in conversation, that said goodbye properly in ways that real goodbyes never quite allowed. When people switched to email she adapted, though something was lost in the adaptation: the physical act of writing had given her time to think, the absence of an undo key forcing a commitment to each sentence. Now she found herself composing messages and then deleting them and starting again, which was really just writing letters without the discipline.",
+            "author": ""
         },
         {
-            "quote": "The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.",
-            "author": "Albert Camus"
+            "id": 19,
+            "quote": "The journalist had spent three days in the town before anyone would talk to her properly. This was not hostility exactly — people held doors, smiled at the counter in the bakery, gave her directions without being asked. But the moment she asked a direct question about the events of the previous spring, a politeness descended that was also a closing-off: faces that had been open became careful, answers became short, and she became aware that she was being managed rather than answered. It was only on the fourth day, in the bar on the edge of town that she hadn't been to yet, that an old man in the corner caught her eye and nodded at the chair across from him, and she understood that he'd been waiting for her to find him.",
+            "author": ""
         },
         {
-            "quote": "Our lives begin to end the day we become silent about things that matter. In the end, we will remember not the words of our enemies but the silence of our friends.",
-            "author": "Martin Luther King Jr."
+            "id": 20,
+            "quote": "The building had been condemned twice and renovated once and was now occupied by the kind of people who chose buildings like this deliberately — artists and writers and a few others who liked the drafts and the irregular rooms and the pipes that made noise in cold weather as if the building were expressing an opinion. She had lived on the fourth floor for nine years and had outlasted several neighbours, a landlord, and a brief period when the city had talked about demolition before losing interest. The elevator had never worked in her time there. The roof leaked in two specific places that she had mapped precisely. She knew this building the way you knew a difficult person you'd loved for a long time — its flaws entirely familiar, its presence impossible to imagine being without.",
+            "author": ""
         },
         {
-            "quote": "Courage is not the absence of fear, but rather the judgment that something else is more important than fear. Act, and the feeling of courage will follow.",
-            "author": "Ambrose Redmoon"
+            "id": 21,
+            "quote": "He had spent most of his adult life in the service of a conviction that turned out to be wrong. Not catastrophically wrong — the conviction hadn't hurt anyone, hadn't led him down a path of cruelty or waste. It had simply organized his life around a premise that wasn't true, and when it was removed, in his late forties, by a set of facts that came too quietly and too late to be argued with, he'd had to figure out what was left. More than he'd expected, as it turned out. The friends were real. The work had been good in itself. The places he'd lived had mattered in ways that had nothing to do with the conviction. What was left, he found, was almost everything.",
+            "author": ""
         },
         {
-            "quote": "Whether you think you can, or you think you cannot, you are right. Belief precedes every achievement by those who refuse to accept limitation.",
-            "author": "Henry Ford"
+            "id": 22,
+            "quote": "There is a quality of attention that skilled listeners have — a particular kind of stillness that invites disclosure without demanding it, that creates the sense of a space into which things can be said. He had met very few people in his life who possessed it. His wife had it, which was part of why he had stayed married to her for thirty-four years. His therapist had it. One of his colleagues, a woman who never seemed to say very much in meetings, but who knew more about the people in the organisation than anyone who spoke often. The quality was not teachable, he believed. It was something people arrived with or didn't, and its rarity made it worth more than almost any other social skill he could name.",
+            "author": ""
         },
         {
-            "quote": "We are what we repeatedly do. Excellence, then, is not an act but a habit formed through discipline practiced daily and without exception.",
-            "author": "Aristotle"
+            "id": 23,
+            "quote": "The painting had come with the house — left by the previous owners in a place where it was too difficult to remove without damaging the wall, which was itself the story of how many things ended up where they were. She had lived with it for six years before she started to like it. In the beginning it had seemed loud and slightly wrong: a blue seascape with figures in the middle distance whose scale was off. Then one evening, in a particular autumn light that came through the west-facing window at an angle she saw only a few times a year, something in it resolved — the figures stopped being wrong and became exactly right, and she understood what the painter had been doing. After that she loved it unconditionally.",
+            "author": ""
         },
         {
-            "quote": "In the middle of every difficulty lies opportunity. Every adversity carries within it the seed of an equivalent or greater benefit.",
-            "author": "Albert Einstein"
+            "id": 24,
+            "quote": "The question she was most tired of being asked was what she did, because the honest answer was too long and the short answer was wrong. She did several things, none of them full-time, in a configuration that made sense to her but required a significant amount of explaining to people who had not organized their lives this way. There was writing — some of it paid, most of it not yet. There was the part-time work at the museum, which she'd kept because she liked the people and the building. There was the research she'd been doing for three years that was slowly becoming the book she wasn't sure she'd ever finish. The question she was really being asked, she knew, was: how do you justify yourself? The honest answer to that one she kept entirely to herself.",
+            "author": ""
         },
         {
-            "quote": "The two most important days in your life are the day you are born and the day you find out why.",
-            "author": "Mark Twain"
+            "id": 25,
+            "quote": "She had inherited from her father a tendency to arrive too early for things, which she had spent years trying to mitigate and eventually accepted. The result was that she had spent a substantial portion of her adult life in airport departure halls, on benches outside locked venues, in lobbies of restaurants that weren't yet open. Rather than continuing to resent it, she had started to use the time deliberately — carrying a book, keeping a notebook, treating early arrival not as wasted time but as a gift of unscheduled minutes that nobody expected anything of her in. It had changed how she felt about waiting. It had also, she thought, changed how she felt about time in general: less like something to be used efficiently and more like a medium she moved through at whatever pace it allowed.",
+            "author": ""
+        }
+    ],
+    "ultimate": [
+        {
+            "id": 1,
+            "quote": "What we call consciousness is, on any account we currently possess, a phenomenon of extraordinary improbability — a local reversal of the universe's general tendency toward diffusion and noise, a pocket of organized complexity that refers to itself, that models its own existence, and that, in doing so, produces the particular quality of felt experience that distinguishes being awake from every other physical state. The neuroscientist can describe, in considerable detail, the electrochemical processes that correlate with this experience; the philosopher can demonstrate, with some precision, why no description of those processes seems to be the same as the experience itself. Between these two positions — the describable mechanism and the undescribable texture of being — lies what some researchers have called the hard problem: not the question of how the brain processes information, which appears answerable in principle, but the question of why processing information should feel like anything at all.",
+            "author": ""
+        },
+        {
+            "id": 2,
+            "quote": "The concept of fairness is one of the most widely used and least rigorously defined terms in political and moral philosophy. It is invoked in disputes about taxation, inheritance, competitive markets, educational access, criminal sentencing, and the distribution of nearly every resource that societies produce. Yet when pressed to articulate what fairness actually requires — as distinct from equality, which is not the same thing, or from efficiency, which is usually in tension with it — most people find that their intuitions become incoherent under examination: generous in the abstract, parochial in application, inconsistent across contexts, and resistant to the kinds of principled constraint that would be necessary to move from intuition to policy. This is not a failure of intelligence. It is evidence that fairness is not a single concept but a family of related and often competing claims, each with different implications and each with legitimate standing.",
+            "author": ""
+        },
+        {
+            "id": 3,
+            "quote": "In the long history of attempts to understand the relationship between language and thought, two broad traditions have struggled with a question that remains only partially resolved: whether language is a medium in which thought occurs, or a representation system through which already-formed thoughts are transmitted to others. The first position — associated most strongly with Whorf and, in more sophisticated form, with later researchers in linguistic relativity — holds that the categories available in a given language shape what can be thought in it, with consequences for perception, memory, and reasoning that can be measured empirically. The second position treats thought as pre-linguistic, with language as a secondary and imperfect instrument of a cognition that operates largely in non-verbal terms. The evidence, accumulated over decades, suggests both positions are partially right and that the more productive question is not which is correct but under what conditions and at what cognitive levels each exerts its influence.",
+            "author": ""
+        },
+        {
+            "id": 4,
+            "quote": "The historian's problem is, at its core, an epistemological one: the past is the only domain of inquiry in which the object of study is not merely absent but, in the most fundamental sense, irrecoverable. A biologist can revisit the organism; a physicist can rerun the experiment; an economist can gather new data from the population still alive and producing. The historian works with residue — the letters and accounts and material objects that survived, which are necessarily a biased sample, preserved not by neutral process but by accident, by the priorities of those who chose what to keep, by the institutions that were funded to maintain it, and by the catastrophes that decided what would burn. Every historical narrative is, therefore, not a reconstruction of the past but a construction in the present, shaped by available evidence, the methods of the field, and the particular preoccupations of the moment in which it is being written.",
+            "author": ""
+        },
+        {
+            "id": 5,
+            "quote": "Trust between institutions and the populations they serve is a compound variable — not a single attitude that can be measured on a single scale, but a structure of layered expectations, each dependent on the ones beneath it, and each capable of independent collapse. At the base is competence: the expectation that the institution can actually do what it claims to do. On top of that sits integrity: the expectation that it is trying to do what it says rather than something it hasn't disclosed. Above that sits benevolence: the expectation that it has the interests of those it serves in mind rather than its own perpetuation or the interests of its internal hierarchy. Each layer can fail independently; the collapse of any one usually destabilizes the others; and the restoration of all three, once lost, requires an order of magnitude more time and effort than the original construction did.",
+            "author": ""
+        },
+        {
+            "id": 6,
+            "quote": "To read a poem slowly is to discover that most of what language does in everyday use, it does by convention rather than necessity — that the words could mean otherwise, that the pauses fall where they do by habit rather than by logic, and that the structure we impose on sentences is one of many possible structures available to a mind attempting to organize time and sound into something transmissible. The poet works in the gaps between convention and possibility, bending familiar syntactic forms just far enough that the reader must slow down and reconstruct, must abandon the shortcut of automatic processing and attend, instead, to the individual unit of the line — what it carries, what it withholds, what the line break does that the sentence, on its own, cannot. This slowing is not a failure of efficiency; it is a return to the texture of language itself, which fluency mostly conceals.",
+            "author": ""
+        },
+        {
+            "id": 7,
+            "quote": "The ethical problems raised by automated decision systems are not, in their essentials, new — they are the ancient problems of discretion, accountability, and legitimacy, reappearing in a context where the agent making decisions is not a person. We have always had to decide how much authority to delegate to systems rather than individuals: bureaucratic rules, sentencing guidelines, standardized assessment tools. What is new is the scale, the opacity, and the speed at which automated decisions now operate, and the way in which technical complexity is used — sometimes deliberately, sometimes as an unexamined side effect — to remove decisions from meaningful scrutiny. When a judge sentences a defendant, we can ask the judge to explain the reasoning. When an algorithm denies a loan or flags a person as high risk, the reasoning may be distributed across millions of weighted parameters in a way that admits no single coherent narrative.",
+            "author": ""
+        },
+        {
+            "id": 8,
+            "quote": "There is a form of courage that requires not the absence of fear but its precise management — not the suppression of the body's alarm systems but the capacity to act despite them, to hold the fear as information rather than as instruction, and to make decisions in conditions where certainty is unavailable and the consequences of error are significant. This is the courage most consistently demanded by medicine, by leadership, by any craft that deals in the irreversible. It differs from recklessness, which is the absence of fear rather than its disciplined presence. It differs, too, from stoicism, which counsels indifference to what cannot be controlled. What it most closely resembles is a skilled improvisational musician: fully aware of the difficulty, holding uncertainty as the medium in which the work happens, neither paralyzed by it nor pretending it isn't there — reading the room, committing to the next note, staying open to what comes back.",
+            "author": ""
+        },
+        {
+            "id": 9,
+            "quote": "Economies, observed over sufficient periods of time, tend to produce outcomes that were not intended by any of the actors within them — distributions of wealth, patterns of land use, structures of employment — that emerge from the interaction of individual decisions following local incentives rather than from any central plan or coordinated will. This is both the great strength of market systems and their persistent ethical problem: the strength is that they aggregate information and allocate resources at scales and speeds that no planning apparatus has ever approached; the problem is that the emergent outcomes are not morally chosen in the way that individual decisions are, cannot be revised by any single actor, and are therefore not responsive to appeals to fairness or justice in the way that deliberately made decisions are. The outcomes are, in a precise sense, nobody's fault, which is exactly the kind of statement that is true, unhelpful, and productive of enormous political difficulty.",
+            "author": ""
+        },
+        {
+            "id": 10,
+            "quote": "The question of what makes a life well-lived has occupied philosophers in every tradition, and the answers have been various enough to suggest that the question is not one that admits a single answer but one that each generation must address with the materials available to it. The Greek tradition located the good life in the exercise of virtue; later traditions located it in salvation, in reason, in the satisfaction of natural desires, in the development of capacities, in relationships of care and interdependence. What these traditions share, despite their differences, is the insistence that the question is not answered by what happens to a person but by what a person does with what happens — by the quality of engagement, the degree of reflection, the willingness to choose deliberately rather than simply to be carried forward by the current of habit and circumstance into whatever arrangement of life presents least resistance.",
+            "author": ""
+        },
+        {
+            "id": 11,
+            "quote": "The relationship between originality and tradition in any art form is best understood not as a tension between freedom and constraint but as a conversation between the present practitioner and the accumulated decisions of everyone who worked in the medium before them. The tradition is not a limitation; it is the compressed intelligence of previous solutions to the same problems — how to control pacing, how to generate and release tension, how to make the form of a thing express its content rather than merely contain it. A practitioner who ignores the tradition does not escape it; they simply lose access to what it knows. A practitioner who merely replicates it produces competence without vitality. What is called originality is almost always a close, attentive engagement with tradition — knowing the conventions so precisely that the deviation from them, when it comes, is felt as meaningful rather than as error.",
+            "author": ""
+        },
+        {
+            "id": 12,
+            "quote": "We tend to think of the acquisition of language as something that happens to children rather than something they do — a process of absorption rather than construction, in which words are received and filed and eventually used. But the evidence from developmental linguistics suggests a more active picture: children are not merely absorbing the language they hear but testing hypotheses about its structure, generating rules from limited data, and applying those rules in ways that produce systematic errors that reveal the logic being applied. The child who says 'mouses' rather than 'mice' is not failing to learn; they are succeeding at extracting a rule and over-extending it — the same process that underlies all learning, which consists not in passive reception of the world's patterns but in the active construction of models that fit available evidence and are revised as new evidence arrives to challenge them.",
+            "author": ""
+        },
+        {
+            "id": 13,
+            "quote": "Any account of scientific progress must eventually confront the problem of paradigm change — the phenomenon, documented with increasing detail since Kuhn's analysis, by which normal science accumulates anomalies that it handles by local adjustment until the accumulated weight of unresolved problems makes the existing framework too expensive to maintain, and a new framework — one that reframes the problems themselves, making some disappear and others central — is adopted by a generation that could not have been argued into it from within the old one. The difficulty is that this description, taken seriously, seems to undermine the claim that science makes progress rather than merely change — that later theories are better rather than simply different. Kuhn himself was careful to distinguish his descriptive account from a relativist one, but the distinction requires more philosophical work than is sometimes acknowledged, and the question of what 'better' means across a paradigm shift remains genuinely hard.",
+            "author": ""
+        },
+        {
+            "id": 14,
+            "quote": "There is a sense in which every written text is an act of trust — trust that the reader will supply the context the writer omitted, bring the knowledge the writer assumed, and perform the interpretive work the text leaves incomplete. A letter written between two people who share a history depends on everything that history contains but does not repeat; a novel depends on the reader's experience of being human; a scientific paper depends on familiarity with the methods and conventions of a particular field. No text is self-sufficient; all texts are embedded in networks of shared knowledge and social practice that they draw on but cannot fully specify. This is not a defect of language but its nature — communication is possible precisely because it need not be exhaustive, because speakers and writers can rely on a background of shared assumption that makes meaning possible without complete specification.",
+            "author": ""
+        },
+        {
+            "id": 15,
+            "quote": "The concept of a natural environment is, on reflection, more philosophically unstable than it first appears. If nature is understood to mean the non-human world, then a city street is no less natural than a forest, in the sense that the organisms in it are subject to the same physical laws, the same evolutionary pressures, the same energetic constraints. If nature is understood as the world unaltered by human activity, the concept has almost no contemporary referent: atmospheric composition, species distribution, soil chemistry, and ocean temperature have all been modified by human activity to a degree that makes the idea of an unaffected nature largely historical. What we call natural environments are better understood as environments in which the marks of human alteration are less immediately visible — a distinction of degree and legibility rather than of kind, which has significant implications for how we think about what we are trying to preserve and why.",
+            "author": ""
+        },
+        {
+            "id": 16,
+            "quote": "The difficulty with consequentialist ethics, in its pure form, is not that it produces obviously wrong answers but that it requires a kind of calculation that the structure of human experience seems to resist. To weigh consequences accurately, you need to know what outcomes will follow from your actions, which requires more knowledge of causal structure than people typically possess; you need to be able to compare the welfare of different people, which requires a theory of welfare comparison that has proved surprisingly resistant to philosophical settlement; and you need to assign probabilities to uncertain events, which requires either empirical data you rarely have or subjective estimates that are known to be systematically biased. The practical consequentialist who attempts to act on these requirements in real time is not performing a calculation but a gesture in the direction of one — and the distance between the gesture and the calculation is where most of the philosophical action is.",
+            "author": ""
+        },
+        {
+            "id": 17,
+            "quote": "Sleep is not, as was once assumed, the brain's period of inactivity — the price paid for consciousness rather than part of what consciousness requires. What the past three decades of sleep research have established is that sleep is an actively managed biological process, serving functions that include the consolidation of memory, the clearance of metabolic waste products from neural tissue, the regulation of immune function, and the resetting of emotional processing circuits that, without adequate sleep, progressively lose the capacity to modulate reactivity. The consequence of sleep loss is not merely tiredness; it is a systematic degradation of cognitive and emotional function that the sleep-deprived person is typically unable to accurately assess, since the capacity for self-assessment is itself among the faculties compromised. This is the particular cruelty of sleep deprivation: those who most need to understand its effects are those least equipped, in that condition, to do so.",
+            "author": ""
+        },
+        {
+            "id": 18,
+            "quote": "Urban density has, in the twentieth century's dominant planning tradition, been treated as a problem to be solved rather than a resource to be managed — an association of density with poverty, crime, and social dysfunction that led to policies of dispersal, to the construction of low-density suburbs as a deliberate improvement on urban life, and to the comprehensive destruction of dense urban neighborhoods in the name of slum clearance. The irony, documented across several decades of subsequent research, is that these policies frequently produced worse outcomes on most of the metrics they claimed to improve: health, economic mobility, social cohesion, environmental impact. Dense urban neighborhoods, when not deliberately disinvested, tend to produce the conditions for informal social monitoring, proximate institutional support, and the economic diversification that make neighborhoods resilient. What was treated as the problem was frequently the solution; what was offered as the solution introduced new forms of the original difficulty in settings that made them harder to address.",
+            "author": ""
+        },
+        {
+            "id": 19,
+            "quote": "The market for attention — the competition among newspapers, broadcasters, websites, social media platforms, and the entire ecosystem of producers that depends on their audiences — is organized around an asymmetry that older media institutions were partly able to resist but that newer ones have largely been unable to: the asymmetry between what engages attention and what is good for people. Outrage, novelty, threat, and social comparison engage attention more reliably than accuracy, context, and complexity, not because audiences are stupid but because these are the responses that evolution optimized for environments in which attending to threat, novelty, and social position had survival value. The problem is not that media organizations deliberately exploit this asymmetry — many of them don't — but that the competitive structure they operate within rewards it regardless of intention. The organization that produces careful, contextual journalism competes with one that produces provocative, partial journalism, and at sufficient scale, the partial account drives down the market for care.",
+            "author": ""
+        },
+        {
+            "id": 20,
+            "quote": "What distinguishes the genuinely difficult intellectual problem from the merely complicated one is not the amount of information required to address it but the absence, at its core, of a clear criterion by which any proposed solution could be evaluated. A complicated problem — designing a bridge, sequencing a genome, modeling a weather system — may require immense technical resources, but there is a fact of the matter about whether the bridge holds, the sequence is correct, the forecast accurate. The genuinely difficult problem — how to distribute justice, what value to assign to things that cannot be priced, how to weigh the interests of the present against those of the future — has no such criterion available, and the method by which a criterion might be established is itself part of what is in dispute. This does not make such problems unanswerable; it makes them answerable only through a process of collective deliberation that is itself a form of action, not merely a prelude to it.",
+            "author": ""
         }
     ]
 }
