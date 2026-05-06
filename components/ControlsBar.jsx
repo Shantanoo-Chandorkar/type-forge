@@ -20,7 +20,7 @@ const CODE_LANGUAGES = [
     { difficulty: 'easy', label: 'js' },
     { difficulty: 'medium', label: 'python' },
     { difficulty: 'hard', label: 'sql' },
-    { difficulty: 'ultimate', label: 'c++' },
+    { difficulty: 'ultimate', label: 'java' },
 ];
 
 /**
