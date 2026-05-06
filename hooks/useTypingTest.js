@@ -18,11 +18,10 @@ function getRandomFromPool(pool) {
 
 /**
  * Selects the quote pool for the given content mode and difficulty.
- * Falls back gracefully when a difficulty level does not exist in a dataset
- * (e.g. academic has no 'easy', code maps difficulty to language).
+ * All content modes now support four difficulty tiers: easy, medium, hard, and ultimate.
  *
  * @param {string} contentMode - 'quotes' | 'common-words' | 'punctuation' | 'code' | 'academic'
- * @param {string} difficulty - 'easy' | 'medium' | 'hard'
+ * @param {string} difficulty - 'easy' | 'medium' | 'hard' | 'ultimate'
  * @returns {Array} Array of quote objects
  */
 function getQuotePool(contentMode, difficulty) {
@@ -30,15 +29,14 @@ function getQuotePool(contentMode, difficulty) {
         case 'common-words':
             return commonWordsData[difficulty] ?? commonWordsData['easy'];
         case 'punctuation':
-            return punctuationData[difficulty] ?? punctuationData['medium'];
+            return punctuationData[difficulty] ?? punctuationData['easy'];
         case 'code': {
-            // Difficulty maps to language: easy=javascript, medium=python, hard=sql
-            const langMap = { easy: 'javascript', medium: 'python', hard: 'sql' };
+            // Difficulty maps to language: easy=javascript, medium=python, hard=sql, ultimate=java
+            const langMap = { easy: 'javascript', medium: 'python', hard: 'sql', ultimate: 'java' };
             return codeData[langMap[difficulty] ?? 'javascript'];
         }
         case 'academic':
-            // Academic has only medium and hard; easy falls back to medium.
-            return academicData[difficulty] ?? academicData['medium'];
+            return academicData[difficulty] ?? academicData['easy'];
         default:
             // 'quotes'
             return quotesData[difficulty] ?? quotesData['easy'];
@@ -117,7 +115,7 @@ function assembleAttempt({
  * Custom hook encapsulating all state and logic for the typing test.
  *
  * @param {Object} params
- * @param {string} params.difficulty - Selected difficulty level ('easy' | 'medium' | 'hard')
+ * @param {string} params.difficulty - Selected difficulty level ('easy' | 'medium' | 'hard' | 'ultimate')
  * @param {number} params.timer - Selected timer duration in seconds
  * @param {string} [params.contentMode] - Content mode ('quotes' | 'common-words' | 'punctuation' | 'code' | 'academic' | 'custom')
  * @param {string | null} [params.customText] - Plain text to use as the typing target when contentMode is 'custom'
