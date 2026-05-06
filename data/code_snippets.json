@@ -1,182 +1,330 @@
 {
     "javascript": [
-        { "quote": "const add = (a, b) => a + b;", "author": "javascript" },
         {
-            "quote": "const arr = [1, 2, 3]; const sum = arr.reduce((a, b) => a + b, 0);",
-            "author": "javascript"
-        },
-        { "quote": "function greet(name) { return `Hello, ${name}!`; }", "author": "javascript" },
-        { "quote": "const doubled = [1, 2, 3, 4].map(x => x * 2);", "author": "javascript" },
-        {
-            "quote": "const isEven = n => n % 2 === 0; const evens = arr.filter(isEven);",
+            "quote": "const add = (a, b) => a + b;\nconst multiply = (a, b) => a * b;\nconsole.log(add(2, 3));\nconsole.log(multiply(4, 5));",
             "author": "javascript"
         },
         {
-            "quote": "const obj = { name: 'Alice', age: 30 }; const { name, age } = obj;",
+            "quote": "const arr = [1, 2, 3, 4, 5];\nconst sum = arr.reduce((acc, val) => acc + val, 0);\nconst avg = sum / arr.length;\nconsole.log(`Sum: ${sum}, Avg: ${avg}`);",
             "author": "javascript"
         },
         {
-            "quote": "async function fetchData(url) { const res = await fetch(url); return res.json(); }",
-            "author": "javascript"
-        },
-        { "quote": "const unique = [...new Set([1, 2, 2, 3, 3, 4])];", "author": "javascript" },
-        {
-            "quote": "const clamp = (val, min, max) => Math.min(Math.max(val, min), max);",
+            "quote": "function greet(name = 'World') {\n    return `Hello, ${name}!`;\n}\nconsole.log(greet());\nconsole.log(greet('Alice'));",
             "author": "javascript"
         },
         {
-            "quote": "const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));",
+            "quote": "const doubled = [1, 2, 3, 4].map(x => x * 2);\nconst evens = doubled.filter(x => x % 4 === 0);\nconst total = evens.reduce((a, b) => a + b, 0);\nconsole.log(total);",
             "author": "javascript"
         },
         {
-            "quote": "const first = arr => arr[0]; const last = arr => arr[arr.length - 1];",
+            "quote": "const obj = { name: 'Alice', age: 30, role: 'admin' };\nconst { name, role } = obj;\nconsole.log(`${name} is an ${role}`);\nconst updated = { ...obj, age: 31 };",
             "author": "javascript"
         },
         {
-            "quote": "const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);",
+            "quote": "async function fetchUser(id) {\n    const res = await fetch(`/api/users/${id}`);\n    if (!res.ok) throw new Error('Not found');\n    return res.json();\n}",
             "author": "javascript"
         },
         {
-            "quote": "try { JSON.parse(raw); } catch (err) { console.error('Invalid JSON', err); }",
+            "quote": "const unique = [...new Set([1, 2, 2, 3, 3, 4])];\nconst sorted = [...unique].sort((a, b) => b - a);\nconsole.log(sorted);",
             "author": "javascript"
         },
         {
-            "quote": "const sorted = [...users].sort((a, b) => a.name.localeCompare(b.name));",
+            "quote": "const clamp = (val, min, max) => Math.min(Math.max(val, min), max);\nconst sleep = ms => new Promise(r => setTimeout(r, ms));\nconst rand = (n) => Math.floor(Math.random() * n);",
             "author": "javascript"
         },
         {
-            "quote": "const flatten = arr => arr.reduce((acc, val) => acc.concat(val), []);",
+            "quote": "const capitalize = str =>\n    str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();\nconst words = 'hello world foo bar';\nconsole.log(words.split(' ').map(capitalize).join(' '));",
             "author": "javascript"
         },
         {
-            "quote": "const debounce = (fn, ms) => { let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); }; };",
+            "quote": "try {\n    const data = JSON.parse(rawInput);\n    console.log(data.name);\n} catch (err) {\n    console.error('Invalid JSON:', err.message);\n}",
             "author": "javascript"
         },
         {
-            "quote": "const pick = (obj, keys) => Object.fromEntries(keys.map(k => [k, obj[k]]));",
+            "quote": "const sorted = [...users].sort((a, b) =>\n    a.lastName.localeCompare(b.lastName)\n);\nconst names = sorted.map(u => `${u.firstName} ${u.lastName}`);\nconsole.log(names.join(', '));",
             "author": "javascript"
         },
         {
-            "quote": "const groupBy = (arr, key) => arr.reduce((acc, item) => { (acc[item[key]] ??= []).push(item); return acc; }, {});",
+            "quote": "const flatten = arr =>\n    arr.reduce((acc, val) =>\n        Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val),\n    []);\nconsole.log(flatten([1, [2, [3, 4]], 5]));",
             "author": "javascript"
         },
         {
-            "quote": "const toBase64 = str => Buffer.from(str).toString('base64');",
+            "quote": "const debounce = (fn, ms) => {\n    let timeout;\n    return (...args) => {\n        clearTimeout(timeout);\n        timeout = setTimeout(() => fn(...args), ms);\n    };\n};",
             "author": "javascript"
         },
         {
-            "quote": "const chunk = (arr, size) => Array.from({ length: Math.ceil(arr.length / size) }, (_, i) => arr.slice(i * size, i * size + size));",
+            "quote": "const pick = (obj, keys) =>\n    Object.fromEntries(keys.map(k => [k, obj[k]]));\nconst omit = (obj, keys) =>\n    Object.fromEntries(\n        Object.entries(obj).filter(([k]) => !keys.includes(k))\n    );",
+            "author": "javascript"
+        },
+        {
+            "quote": "const groupBy = (arr, key) =>\n    arr.reduce((acc, item) => {\n        const group = item[key];\n        (acc[group] ??= []).push(item);\n        return acc;\n    }, {});",
+            "author": "javascript"
+        },
+        {
+            "quote": "class EventEmitter {\n    #listeners = {};\n    on(event, fn) { (this.#listeners[event] ??= []).push(fn); }\n    emit(event, ...args) {\n        this.#listeners[event]?.forEach(fn => fn(...args));\n    }\n}",
+            "author": "javascript"
+        },
+        {
+            "quote": "async function retry(fn, attempts = 3) {\n    for (let i = 0; i < attempts; i++) {\n        try { return await fn(); }\n        catch (err) {\n            if (i === attempts - 1) throw err;\n        }\n    }\n}",
+            "author": "javascript"
+        },
+        {
+            "quote": "const chunk = (arr, size) =>\n    Array.from(\n        { length: Math.ceil(arr.length / size) },\n        (_, i) => arr.slice(i * size, i * size + size)\n    );\nconsole.log(chunk([1,2,3,4,5], 2));",
+            "author": "javascript"
+        },
+        {
+            "quote": "const memoize = (fn) => {\n    const cache = new Map();\n    return (...args) => {\n        const key = JSON.stringify(args);\n        if (cache.has(key)) return cache.get(key);\n        const result = fn(...args);\n        cache.set(key, result);\n        return result;\n    };\n};",
+            "author": "javascript"
+        },
+        {
+            "quote": "function* range(start, end, step = 1) {\n    for (let i = start; i < end; i += step) {\n        yield i;\n    }\n}\nconst evens = [...range(0, 10, 2)];\nconsole.log(evens);",
             "author": "javascript"
         }
     ],
     "python": [
-        { "quote": "def add(a, b): return a + b", "author": "python" },
-        { "quote": "squares = [x ** 2 for x in range(1, 11)]", "author": "python" },
-        { "quote": "def greet(name): return f'Hello, {name}!'", "author": "python" },
-        { "quote": "evens = list(filter(lambda x: x % 2 == 0, range(20)))", "author": "python" },
-        { "quote": "with open('data.txt', 'r') as f: content = f.read()", "author": "python" },
         {
-            "quote": "words = text.lower().split(); freq = {w: words.count(w) for w in set(words)}",
-            "author": "python"
-        },
-        { "quote": "import json; data = json.loads(raw_string)", "author": "python" },
-        {
-            "quote": "def factorial(n): return 1 if n <= 1 else n * factorial(n - 1)",
+            "quote": "def add(a, b):\n    return a + b\n\ndef multiply(a, b):\n    return a * b\n\nresult = add(multiply(3, 4), multiply(2, 5))\nprint(result)",
             "author": "python"
         },
         {
-            "quote": "sorted_items = sorted(data, key=lambda x: x['score'], reverse=True)",
-            "author": "python"
-        },
-        { "quote": "matrix = [[0] * cols for _ in range(rows)]", "author": "python" },
-        { "quote": "class Stack: def __init__(self): self.items = []", "author": "python" },
-        { "quote": "from collections import Counter; counts = Counter(words)", "author": "python" },
-        {
-            "quote": "try: result = int(user_input) except ValueError: print('Not a number')",
-            "author": "python"
-        },
-        { "quote": "pairs = list(zip(keys, values)); d = dict(pairs)", "author": "python" },
-        {
-            "quote": "def is_prime(n): return n > 1 and all(n % i != 0 for i in range(2, int(n**0.5)+1))",
+            "quote": "squares = [x ** 2 for x in range(1, 11)]\ncubes = {x: x ** 3 for x in range(1, 6)}\nevens = list(filter(lambda x: x % 2 == 0, squares))\nprint(evens)\nprint(cubes)",
             "author": "python"
         },
         {
-            "quote": "import os; files = [f for f in os.listdir('.') if f.endswith('.py')]",
+            "quote": "def greet(name, title='Dr.'):\n    return f'Hello, {title} {name}!'\n\nnames = ['Smith', 'Jones', 'Lee']\nfor name in names:\n    print(greet(name))",
             "author": "python"
         },
         {
-            "quote": "from functools import reduce; product = reduce(lambda a, b: a * b, nums, 1)",
+            "quote": "def read_words(filepath):\n    with open(filepath, 'r') as f:\n        content = f.read()\n    words = content.lower().split()\n    return {w: words.count(w) for w in set(words)}\n\nfreq = read_words('text.txt')",
             "author": "python"
         },
-        { "quote": "flat = [item for sublist in nested for item in sublist]", "author": "python" },
         {
-            "quote": "import hashlib; h = hashlib.sha256(data.encode()).hexdigest()",
+            "quote": "import json\n\ndef load_config(path):\n    try:\n        with open(path, 'r') as f:\n            return json.load(f)\n    except (FileNotFoundError, json.JSONDecodeError) as e:\n        print(f'Error: {e}')\n        return {}",
             "author": "python"
         },
-        { "quote": "chunks = [lst[i:i+n] for i in range(0, len(lst), n)]", "author": "python" }
+        {
+            "quote": "def factorial(n):\n    if n < 0:\n        raise ValueError('n must be non-negative')\n    return 1 if n <= 1 else n * factorial(n - 1)\n\nresults = [factorial(i) for i in range(10)]\nprint(results)",
+            "author": "python"
+        },
+        {
+            "quote": "from functools import wraps\nimport time\n\ndef timer(fn):\n    @wraps(fn)\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = fn(*args, **kwargs)\n        print(f'{fn.__name__} took {time.time() - start:.3f}s')\n        return result\n    return wrapper",
+            "author": "python"
+        },
+        {
+            "quote": "class Stack:\n    def __init__(self):\n        self._items = []\n\n    def push(self, item):\n        self._items.append(item)\n\n    def pop(self):\n        if self.is_empty():\n            raise IndexError('Stack is empty')\n        return self._items.pop()\n\n    def is_empty(self):\n        return len(self._items) == 0",
+            "author": "python"
+        },
+        {
+            "quote": "from collections import defaultdict, Counter\n\ndef word_frequency(text):\n    words = text.lower().split()\n    freq = Counter(words)\n    return freq.most_common(10)\n\ntop = word_frequency(sample_text)\nfor word, count in top:\n    print(f'{word}: {count}')",
+            "author": "python"
+        },
+        {
+            "quote": "def is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\nprimes = [n for n in range(2, 100) if is_prime(n)]\nprint(primes)",
+            "author": "python"
+        },
+        {
+            "quote": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+            "author": "python"
+        },
+        {
+            "quote": "import os\n\ndef find_files(directory, extension):\n    matches = []\n    for root, dirs, files in os.walk(directory):\n        for filename in files:\n            if filename.endswith(extension):\n                matches.append(os.path.join(root, filename))\n    return matches",
+            "author": "python"
+        },
+        {
+            "quote": "def flatten(lst):\n    result = []\n    for item in lst:\n        if isinstance(item, list):\n            result.extend(flatten(item))\n        else:\n            result.append(item)\n    return result\n\nnested = [1, [2, [3, 4]], [5, 6]]\nprint(flatten(nested))",
+            "author": "python"
+        },
+        {
+            "quote": "from dataclasses import dataclass, field\nfrom typing import List\n\n@dataclass\nclass Student:\n    name: str\n    grade: float\n    courses: List[str] = field(default_factory=list)\n\n    def is_passing(self) -> bool:\n        return self.grade >= 60.0",
+            "author": "python"
+        },
+        {
+            "quote": "def chunk(lst, size):\n    return [lst[i:i + size] for i in range(0, len(lst), size)]\n\ndef transpose(matrix):\n    return list(map(list, zip(*matrix)))\n\ngrid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nprint(transpose(grid))",
+            "author": "python"
+        },
+        {
+            "quote": "from typing import Generator\n\ndef fibonacci() -> Generator[int, None, None]:\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b\n\nfib = fibonacci()\nfirst_ten = [next(fib) for _ in range(10)]\nprint(first_ten)",
+            "author": "python"
+        },
+        {
+            "quote": "import hashlib\nimport hmac\n\ndef make_token(secret: str, payload: str) -> str:\n    key = secret.encode('utf-8')\n    msg = payload.encode('utf-8')\n    return hmac.new(key, msg, hashlib.sha256).hexdigest()\n\ntoken = make_token('my_secret', 'user:42')",
+            "author": "python"
+        },
+        {
+            "quote": "from contextlib import contextmanager\nimport sqlite3\n\n@contextmanager\ndef get_db(path):\n    conn = sqlite3.connect(path)\n    conn.row_factory = sqlite3.Row\n    try:\n        yield conn\n        conn.commit()\n    except Exception:\n        conn.rollback()\n        raise\n    finally:\n        conn.close()",
+            "author": "python"
+        },
+        {
+            "quote": "from abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self) -> float:\n        pass\n\nclass Circle(Shape):\n    def __init__(self, radius: float):\n        self.radius = radius\n\n    def area(self) -> float:\n        import math\n        return math.pi * self.radius ** 2",
+            "author": "python"
+        },
+        {
+            "quote": "def memoize(fn):\n    cache = {}\n\n    def wrapper(*args):\n        if args not in cache:\n            cache[args] = fn(*args)\n        return cache[args]\n\n    return wrapper\n\n@memoize\ndef fib(n):\n    return n if n < 2 else fib(n - 1) + fib(n - 2)",
+            "author": "python"
+        }
     ],
     "sql": [
-        { "quote": "SELECT name, email FROM users WHERE active = 1;", "author": "sql" },
-        { "quote": "INSERT INTO orders (user_id, total) VALUES (42, 99.99);", "author": "sql" },
-        { "quote": "UPDATE products SET price = 19.99 WHERE id = 7;", "author": "sql" },
-        { "quote": "DELETE FROM sessions WHERE expires_at < NOW();", "author": "sql" },
-        { "quote": "SELECT COUNT(*) AS total_users FROM users;", "author": "sql" },
         {
-            "quote": "SELECT u.name, COUNT(o.id) AS orders FROM users u LEFT JOIN orders o ON u.id = o.user_id GROUP BY u.id;",
+            "quote": "SELECT u.name, u.email, COUNT(o.id) AS order_count\nFROM users u\nLEFT JOIN orders o ON o.user_id = u.id\nWHERE u.active = 1\nGROUP BY u.id, u.name, u.email\nHAVING COUNT(o.id) > 0\nORDER BY order_count DESC;",
             "author": "sql"
         },
         {
-            "quote": "SELECT * FROM logs WHERE created_at >= '2024-01-01' ORDER BY created_at DESC LIMIT 100;",
-            "author": "sql"
-        },
-        { "quote": "CREATE INDEX idx_users_email ON users(email);", "author": "sql" },
-        {
-            "quote": "SELECT product_id, SUM(quantity) AS sold FROM order_items GROUP BY product_id HAVING sold > 50;",
+            "quote": "SELECT p.name, p.price, c.name AS category,\n       SUM(oi.quantity) AS units_sold\nFROM products p\nINNER JOIN categories c ON c.id = p.category_id\nINNER JOIN order_items oi ON oi.product_id = p.id\nGROUP BY p.id, p.name, p.price, c.name\nHAVING SUM(oi.quantity) > 50\nORDER BY units_sold DESC;",
             "author": "sql"
         },
         {
-            "quote": "ALTER TABLE users ADD COLUMN last_login TIMESTAMP NULL DEFAULT NULL;",
+            "quote": "WITH monthly_revenue AS (\n    SELECT DATE_TRUNC('month', created_at) AS month,\n           SUM(total) AS revenue\n    FROM orders\n    WHERE status = 'completed'\n    GROUP BY 1\n)\nSELECT month, revenue,\n       LAG(revenue) OVER (ORDER BY month) AS prev_month\nFROM monthly_revenue\nORDER BY month;",
             "author": "sql"
         },
         {
-            "quote": "SELECT id, name, RANK() OVER (ORDER BY score DESC) AS rank FROM players;",
+            "quote": "SELECT u.id, u.name,\n       ROW_NUMBER() OVER (PARTITION BY u.region ORDER BY u.score DESC) AS rank\nFROM users u\nWHERE u.active = 1\n  AND u.created_at >= NOW() - INTERVAL '1 year'\nQUALIFY rank <= 10;",
             "author": "sql"
         },
         {
-            "quote": "SELECT * FROM employees WHERE department_id IN (SELECT id FROM departments WHERE region = 'EU');",
+            "quote": "SELECT e.name, e.salary,\n       d.name AS department,\n       AVG(e2.salary) OVER (PARTITION BY e.department_id) AS dept_avg\nFROM employees e\nINNER JOIN departments d ON d.id = e.department_id\nLEFT JOIN employees e2 ON e2.department_id = e.department_id\nWHERE e.status = 'active';",
             "author": "sql"
         },
         {
-            "quote": "BEGIN; UPDATE accounts SET balance = balance - 100 WHERE id = 1; UPDATE accounts SET balance = balance + 100 WHERE id = 2; COMMIT;",
+            "quote": "WITH RECURSIVE org_chart AS (\n    SELECT id, name, manager_id, 1 AS depth\n    FROM employees WHERE manager_id IS NULL\n    UNION ALL\n    SELECT e.id, e.name, e.manager_id, oc.depth + 1\n    FROM employees e\n    INNER JOIN org_chart oc ON oc.id = e.manager_id\n)\nSELECT * FROM org_chart ORDER BY depth, name;",
             "author": "sql"
         },
         {
-            "quote": "SELECT COALESCE(nickname, first_name, 'Anonymous') AS display_name FROM users;",
+            "quote": "SELECT p.id, p.title,\n       COALESCE(r.avg_rating, 0) AS avg_rating,\n       COALESCE(r.review_count, 0) AS review_count\nFROM products p\nLEFT JOIN (\n    SELECT product_id,\n           AVG(rating) AS avg_rating,\n           COUNT(*) AS review_count\n    FROM reviews\n    GROUP BY product_id\n) r ON r.product_id = p.id\nWHERE p.published = 1;",
             "author": "sql"
         },
         {
-            "quote": "CREATE TABLE tags (id SERIAL PRIMARY KEY, name VARCHAR(50) NOT NULL UNIQUE);",
+            "quote": "BEGIN;\nINSERT INTO orders (user_id, status, total)\nVALUES (42, 'pending', 149.99)\nRETURNING id INTO @order_id;\nINSERT INTO order_items (order_id, product_id, quantity, price)\nVALUES (@order_id, 7, 2, 74.99);\nUPDATE inventory SET stock = stock - 2 WHERE product_id = 7;\nCOMMIT;",
             "author": "sql"
         },
         {
-            "quote": "SELECT DATE_TRUNC('month', created_at) AS month, COUNT(*) FROM signups GROUP BY 1 ORDER BY 1;",
+            "quote": "SELECT\n    DATE_TRUNC('week', created_at) AS week,\n    status,\n    COUNT(*) AS count,\n    SUM(total) AS revenue\nFROM orders\nWHERE created_at BETWEEN '2024-01-01' AND '2024-12-31'\nGROUP BY ROLLUP (DATE_TRUNC('week', created_at), status)\nORDER BY week, status;",
             "author": "sql"
         },
         {
-            "quote": "SELECT a.name AS parent, b.name AS child FROM categories a JOIN categories b ON b.parent_id = a.id;",
+            "quote": "SELECT u.name,\n       RANK() OVER (ORDER BY total_spent DESC) AS spending_rank,\n       NTILE(4) OVER (ORDER BY total_spent DESC) AS quartile\nFROM (\n    SELECT u.id, u.name, SUM(o.total) AS total_spent\n    FROM users u\n    INNER JOIN orders o ON o.user_id = u.id\n    WHERE o.status = 'completed'\n    GROUP BY u.id, u.name\n) u;",
             "author": "sql"
         },
         {
-            "quote": "WITH top_users AS (SELECT user_id FROM orders GROUP BY user_id HAVING COUNT(*) > 5) SELECT * FROM users WHERE id IN (SELECT user_id FROM top_users);",
+            "quote": "SELECT a.name AS parent_category,\n       b.name AS child_category,\n       COUNT(p.id) AS product_count\nFROM categories a\nLEFT JOIN categories b ON b.parent_id = a.id\nLEFT JOIN products p ON p.category_id = b.id\nWHERE a.parent_id IS NULL\nGROUP BY a.id, a.name, b.id, b.name\nORDER BY a.name, b.name;",
             "author": "sql"
         },
         {
-            "quote": "UPDATE users SET status = 'inactive' WHERE last_login < NOW() - INTERVAL '90 days';",
+            "quote": "WITH top_customers AS (\n    SELECT user_id, SUM(total) AS lifetime_value\n    FROM orders\n    WHERE status = 'completed'\n    GROUP BY user_id\n    HAVING SUM(total) > 1000\n)\nSELECT u.name, u.email, tc.lifetime_value\nFROM users u\nINNER JOIN top_customers tc ON tc.user_id = u.id\nORDER BY tc.lifetime_value DESC;",
             "author": "sql"
         },
         {
-            "quote": "SELECT DISTINCT category FROM products WHERE stock > 0 ORDER BY category ASC;",
+            "quote": "SELECT\n    s.name AS store,\n    p.name AS product,\n    SUM(s2.quantity) AS quantity_sold,\n    SUM(s2.quantity * p.price) AS revenue\nFROM sales s2\nINNER JOIN stores s ON s.id = s2.store_id\nINNER JOIN products p ON p.id = s2.product_id\nWHERE s2.sold_at >= CURRENT_DATE - INTERVAL '90 days'\nGROUP BY s.id, s.name, p.id, p.name\nHAVING SUM(s2.quantity) > 10;",
             "author": "sql"
+        },
+        {
+            "quote": "SELECT u.id, u.email,\n       CASE\n           WHEN last_login < NOW() - INTERVAL '365 days' THEN 'dormant'\n           WHEN last_login < NOW() - INTERVAL '90 days' THEN 'inactive'\n           WHEN last_login < NOW() - INTERVAL '30 days' THEN 'lapsed'\n           ELSE 'active'\n       END AS status\nFROM users u\nORDER BY last_login ASC;",
+            "author": "sql"
+        },
+        {
+            "quote": "WITH cohorts AS (\n    SELECT user_id,\n           DATE_TRUNC('month', MIN(created_at)) AS cohort_month\n    FROM orders\n    GROUP BY user_id\n)\nSELECT c.cohort_month,\n       DATE_TRUNC('month', o.created_at) AS order_month,\n       COUNT(DISTINCT o.user_id) AS retained_users\nFROM orders o\nINNER JOIN cohorts c ON c.user_id = o.user_id\nGROUP BY 1, 2\nORDER BY 1, 2;",
+            "author": "sql"
+        },
+        {
+            "quote": "SELECT p.id, p.name,\n       p.stock,\n       SUM(oi.quantity) AS ordered_last_30d,\n       p.stock - SUM(oi.quantity) AS projected_remaining\nFROM products p\nLEFT JOIN order_items oi ON oi.product_id = p.id\nLEFT JOIN orders o ON o.id = oi.order_id\n    AND o.created_at >= NOW() - INTERVAL '30 days'\nGROUP BY p.id, p.name, p.stock\nHAVING p.stock < SUM(oi.quantity) * 2;",
+            "author": "sql"
+        },
+        {
+            "quote": "SELECT\n    t.name AS tag,\n    COUNT(DISTINCT a.id) AS article_count,\n    AVG(a.view_count) AS avg_views,\n    MAX(a.published_at) AS latest_article\nFROM tags t\nINNER JOIN article_tags at ON at.tag_id = t.id\nINNER JOIN articles a ON a.id = at.article_id\nWHERE a.published = 1\n  AND a.published_at >= NOW() - INTERVAL '6 months'\nGROUP BY t.id, t.name\nORDER BY avg_views DESC;",
+            "author": "sql"
+        },
+        {
+            "quote": "SELECT\n    EXTRACT(HOUR FROM created_at) AS hour_of_day,\n    EXTRACT(DOW FROM created_at) AS day_of_week,\n    COUNT(*) AS requests,\n    PERCENTILE_CONT(0.95) WITHIN GROUP (ORDER BY response_ms) AS p95_latency\nFROM api_logs\nWHERE created_at >= NOW() - INTERVAL '7 days'\nGROUP BY 1, 2\nORDER BY 2, 1;",
+            "author": "sql"
+        },
+        {
+            "quote": "WITH flagged AS (\n    SELECT order_id\n    FROM fraud_signals\n    WHERE score > 0.8\n      AND created_at >= NOW() - INTERVAL '24 hours'\n),\ncancelled AS (\n    UPDATE orders\n    SET status = 'cancelled', cancelled_at = NOW()\n    WHERE id IN (SELECT order_id FROM flagged)\n    RETURNING id, user_id\n)\nSELECT u.email FROM users u\nINNER JOIN cancelled c ON c.user_id = u.id;",
+            "author": "sql"
+        },
+        {
+            "quote": "SELECT\n    s.region,\n    p.category,\n    SUM(s.revenue) AS total_revenue,\n    SUM(SUM(s.revenue)) OVER (PARTITION BY s.region) AS region_total,\n    ROUND(\n        100.0 * SUM(s.revenue) /\n        SUM(SUM(s.revenue)) OVER (PARTITION BY s.region),\n        2\n    ) AS pct_of_region\nFROM sales s\nINNER JOIN products p ON p.id = s.product_id\nGROUP BY s.region, p.category\nORDER BY s.region, total_revenue DESC;",
+            "author": "sql"
+        }
+    ],
+    "java": [
+        {
+            "quote": "public class Counter {\n    private int count = 0;\n\n    public void increment() {\n        count++;\n    }\n\n    public void decrement() {\n        count = Math.max(0, count - 1);\n    }\n\n    public int getCount() {\n        return count;\n    }\n\n    @Override\n    public String toString() {\n        return \"Counter{count=\" + count + \"}\";\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.ArrayList;\nimport java.util.List;\nimport java.util.Optional;\n\npublic class UserRepository {\n    private final List<User> users = new ArrayList<>();\n\n    public void add(User user) {\n        users.add(user);\n    }\n\n    public Optional<User> findById(int id) {\n        return users.stream()\n                    .filter(u -> u.getId() == id)\n                    .findFirst();\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "public interface Printable {\n    void print();\n    default void printWithBorder() {\n        System.out.println(\"---\");\n        print();\n        System.out.println(\"---\");\n    }\n}\n\npublic class Report implements Printable {\n    private final String title;\n\n    public Report(String title) {\n        this.title = title;\n    }\n\n    @Override\n    public void print() {\n        System.out.println(title);\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.*;\nimport java.util.stream.*;\n\npublic class StreamExample {\n    public static void main(String[] args) {\n        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);\n        int sumOfSquaresOfEvens = numbers.stream()\n            .filter(n -> n % 2 == 0)\n            .map(n -> n * n)\n            .reduce(0, Integer::sum);\n        System.out.println(sumOfSquaresOfEvens);\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "public class Stack<T> {\n    private final List<T> items = new ArrayList<>();\n\n    public void push(T item) {\n        items.add(item);\n    }\n\n    public T pop() {\n        if (isEmpty()) throw new NoSuchElementException(\"Stack is empty\");\n        return items.remove(items.size() - 1);\n    }\n\n    public T peek() {\n        if (isEmpty()) throw new NoSuchElementException(\"Stack is empty\");\n        return items.get(items.size() - 1);\n    }\n\n    public boolean isEmpty() {\n        return items.isEmpty();\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.io.*;\nimport java.nio.file.*;\n\npublic class FileUtil {\n    public static String readFile(String path) throws IOException {\n        return Files.readString(Path.of(path));\n    }\n\n    public static void writeFile(String path, String content) throws IOException {\n        Files.writeString(\n            Path.of(path),\n            content,\n            StandardOpenOption.CREATE,\n            StandardOpenOption.TRUNCATE_EXISTING\n        );\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "public class Person implements Comparable<Person> {\n    private final String name;\n    private final int age;\n\n    public Person(String name, int age) {\n        this.name = name;\n        this.age = age;\n    }\n\n    @Override\n    public int compareTo(Person other) {\n        return Integer.compare(this.age, other.age);\n    }\n\n    @Override\n    public String toString() {\n        return name + \" (\" + age + \")\";\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.HashMap;\nimport java.util.Map;\n\npublic class Memoizer<K, V> {\n    private final Map<K, V> cache = new HashMap<>();\n    private final java.util.function.Function<K, V> fn;\n\n    public Memoizer(java.util.function.Function<K, V> fn) {\n        this.fn = fn;\n    }\n\n    public V get(K key) {\n        return cache.computeIfAbsent(key, fn);\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.concurrent.locks.ReentrantLock;\n\npublic class SafeCounter {\n    private int count = 0;\n    private final ReentrantLock lock = new ReentrantLock();\n\n    public void increment() {\n        lock.lock();\n        try {\n            count++;\n        } finally {\n            lock.unlock();\n        }\n    }\n\n    public int getCount() {\n        lock.lock();\n        try {\n            return count;\n        } finally {\n            lock.unlock();\n        }\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "public enum Status {\n    PENDING(\"Pending\"),\n    ACTIVE(\"Active\"),\n    CANCELLED(\"Cancelled\"),\n    COMPLETED(\"Completed\");\n\n    private final String label;\n\n    Status(String label) {\n        this.label = label;\n    }\n\n    public String getLabel() {\n        return label;\n    }\n\n    @Override\n    public String toString() {\n        return label;\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.*;\nimport java.util.stream.*;\n\npublic class GroupingExample {\n    public Map<String, List<Employee>> groupByDepartment(\n            List<Employee> employees) {\n        return employees.stream()\n            .filter(e -> e.isActive())\n            .sorted(Comparator.comparing(Employee::getName))\n            .collect(Collectors.groupingBy(Employee::getDepartment));\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "public abstract class Animal {\n    protected final String name;\n\n    public Animal(String name) {\n        this.name = name;\n    }\n\n    public abstract String sound();\n\n    @Override\n    public String toString() {\n        return name + \" says \" + sound();\n    }\n}\n\npublic class Dog extends Animal {\n    public Dog(String name) { super(name); }\n\n    @Override\n    public String sound() { return \"woof\"; }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.function.*;\n\npublic class Pipeline<T> {\n    private final T value;\n\n    private Pipeline(T value) {\n        this.value = value;\n    }\n\n    public static <T> Pipeline<T> of(T value) {\n        return new Pipeline<>(value);\n    }\n\n    public <R> Pipeline<R> map(Function<T, R> fn) {\n        return new Pipeline<>(fn.apply(value));\n    }\n\n    public T get() {\n        return value;\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.*;\n\npublic class LRUCache<K, V> extends LinkedHashMap<K, V> {\n    private final int capacity;\n\n    public LRUCache(int capacity) {\n        super(capacity, 0.75f, true);\n        this.capacity = capacity;\n    }\n\n    @Override\n    protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {\n        return size() > capacity;\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.concurrent.*;\n\npublic class AsyncWorker {\n    private final ExecutorService executor =\n        Executors.newFixedThreadPool(4);\n\n    public <T> Future<T> submit(Callable<T> task) {\n        return executor.submit(task);\n    }\n\n    public void shutdown() {\n        executor.shutdown();\n        try {\n            executor.awaitTermination(30, TimeUnit.SECONDS);\n        } catch (InterruptedException e) {\n            Thread.currentThread().interrupt();\n        }\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "public record Point(double x, double y) {\n    public double distanceTo(Point other) {\n        double dx = this.x - other.x;\n        double dy = this.y - other.y;\n        return Math.sqrt(dx * dx + dy * dy);\n    }\n\n    public Point translate(double dx, double dy) {\n        return new Point(x + dx, y + dy);\n    }\n\n    @Override\n    public String toString() {\n        return String.format(\"(%.2f, %.2f)\", x, y);\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Statistics {\n    public static OptionalDouble mean(List<Double> values) {\n        return values.stream().mapToDouble(Double::doubleValue).average();\n    }\n\n    public static double variance(List<Double> values) {\n        double avg = mean(values).orElse(0.0);\n        return values.stream()\n            .mapToDouble(v -> Math.pow(v - avg, 2))\n            .average()\n            .orElse(0.0);\n    }\n\n    public static double stddev(List<Double> values) {\n        return Math.sqrt(variance(values));\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.function.*;\n\npublic class Result<T> {\n    private final T value;\n    private final String error;\n\n    private Result(T value, String error) {\n        this.value = value;\n        this.error = error;\n    }\n\n    public static <T> Result<T> ok(T value) {\n        return new Result<>(value, null);\n    }\n\n    public static <T> Result<T> err(String error) {\n        return new Result<>(null, error);\n    }\n\n    public boolean isOk() { return error == null; }\n    public T getValue() { return value; }\n    public String getError() { return error; }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.*;\n\npublic class Graph<T> {\n    private final Map<T, Set<T>> adj = new HashMap<>();\n\n    public void addEdge(T from, T to) {\n        adj.computeIfAbsent(from, k -> new HashSet<>()).add(to);\n        adj.computeIfAbsent(to, k -> new HashSet<>()).add(from);\n    }\n\n    public Set<T> neighbors(T node) {\n        return adj.getOrDefault(node, Collections.emptySet());\n    }\n\n    public boolean hasEdge(T from, T to) {\n        return adj.getOrDefault(from, Collections.emptySet()).contains(to);\n    }\n}",
+            "author": "java"
+        },
+        {
+            "quote": "import java.util.*;\nimport java.util.stream.Collectors;\n\npublic class WordCounter {\n    public Map<String, Long> count(String text) {\n        return Arrays.stream(text.toLowerCase().split(\"\\\\W+\"))\n            .filter(w -> !w.isBlank())\n            .collect(Collectors.groupingBy(\n                w -> w,\n                Collectors.counting()\n            ));\n    }\n\n    public List<Map.Entry<String, Long>> topN(String text, int n) {\n        return count(text).entrySet().stream()\n            .sorted(Map.Entry.<String, Long>comparingByValue().reversed())\n            .limit(n)\n            .collect(Collectors.toList());\n    }\n}",
+            "author": "java"
         }
     ]
 }
