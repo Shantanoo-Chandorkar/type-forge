@@ -82,7 +82,7 @@ export function AnalyticsProvider({ children }) {
      * @param {Object} attempt - Completed attempt object matching the storage schema.
      */
     function addAttempt(attempt) {
-        // Attempt history — FIFO cap
+        // Attempt history - FIFO cap
         setAttempts((prev) => {
             const next = [...prev, attempt].slice(-FIFO_CAP);
             writeStorage(STORAGE_KEY, next);
@@ -98,7 +98,7 @@ export function AnalyticsProvider({ children }) {
             });
         }
 
-        // Personal best — keyed by "difficulty-timer"
+        // Personal best - keyed by "difficulty-timer"
         const bestKey = `${attempt.difficulty}-${attempt.timer}`;
         setPersonalBests((prev) => {
             const current = prev[bestKey];

@@ -53,7 +53,7 @@ export default function Header() {
                     ))}
                 </nav>
 
-                {/* Theme toggle — always visible */}
+                {/* Theme toggle - always visible */}
                 <button
                     onClick={toggleTheme}
                     className="ml-auto text-muted hover:text-foreground transition-colors"
@@ -91,7 +91,7 @@ export default function Header() {
                     )}
                 </button>
 
-                {/* Hamburger — mobile only */}
+                {/* Hamburger - mobile only */}
                 <button
                     onClick={() => setMenuOpen((open) => !open)}
                     className="sm:hidden ml-3 text-muted hover:text-foreground transition-colors"

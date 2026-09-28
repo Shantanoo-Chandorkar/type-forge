@@ -2,8 +2,8 @@
  * Shared font size class map for UI strings that scale with the active
  * font size setting. Each entry provides two Tailwind text-size classes:
  *
- *   label — for section headings, column headers, and secondary text
- *   data  — for primary content: buttons, table rows, body strings
+ *   label - for section headings, column headers, and secondary text
+ *   data  - for primary content: buttons, table rows, body strings
  *
  * small  → label: text-xs  (12px),  data: text-sm (14px)
  * medium → label: text-sm  (14px),  data: text-base (16px)
