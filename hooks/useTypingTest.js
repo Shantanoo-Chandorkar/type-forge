@@ -45,7 +45,7 @@ function getQuotePool(contentMode, difficulty) {
 
 /**
  * Assembles a completed attempt object from resolved test values.
- * Pure function; no ref or state access — all inputs passed explicitly.
+ * Pure function; no ref or state access - all inputs passed explicitly.
  *
  * @param {Object} params
  * @param {Array}   params.timeline           - Per-second WPM snapshots from the test run
