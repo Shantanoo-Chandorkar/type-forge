@@ -35,6 +35,9 @@ export const metadata = {
         'A minimalist typing speed test. Measure your WPM, track your errors, and improve your accuracy.',
 };
 
+// Runs before first paint so a saved light theme never flashes dark
+const themeInitScript = `try{if(localStorage.getItem('tf-theme')==='light'){document.documentElement.setAttribute('data-theme','light')}}catch(e){}`;
+
 export default function RootLayout({ children }) {
     const fontVars = [
         shareTechMono.variable,
@@ -44,7 +47,15 @@ export default function RootLayout({ children }) {
     ].join(' ');
 
     return (
-        <html lang="en" className={`${fontVars} h-full antialiased`}>
+        <html
+            lang="en"
+            data-theme="dark"
+            suppressHydrationWarning
+            className={`${fontVars} h-full antialiased`}
+        >
+            <head>
+                <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+            </head>
             <body className="min-h-full flex flex-col">
                 <ThemeProvider>
                     <AnalyticsProvider>

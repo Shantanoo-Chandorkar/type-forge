@@ -1,19 +1,6 @@
 @import 'tailwindcss';
 
 :root {
-    --background: #e8e8e8;
-    --foreground: #2d2d2d;
-    --muted: #aaaaaa;
-    --correct: #4a4a4a;
-    --incorrect: #c94040;
-    --border: #d0d0d0;
-    --border-subtle: #ebebeb;
-    /* Default char size, overridden at runtime by SettingsContext */
-    --char-font-size: 1.25rem;
-}
-
-/* Dark mode overrides - activated by ThemeContext via data-theme="dark" on <html> */
-[data-theme='dark'] {
     --background: #1a1a1a;
     --foreground: #e0e0e0;
     --muted: #666666;
@@ -21,6 +8,19 @@
     --incorrect: #e05555;
     --border: #3a3a3a;
     --border-subtle: #2d2d2d;
+    /* Default char size, overridden at runtime by SettingsContext */
+    --char-font-size: 1.25rem;
+}
+
+/* Dark is the base so the first paint is never light; light is applied via data-theme="light" on <html> */
+[data-theme='light'] {
+    --background: #e8e8e8;
+    --foreground: #2d2d2d;
+    --muted: #aaaaaa;
+    --correct: #4a4a4a;
+    --incorrect: #c94040;
+    --border: #d0d0d0;
+    --border-subtle: #ebebeb;
 }
 
 @theme inline {
