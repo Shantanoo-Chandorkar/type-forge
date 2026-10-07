@@ -11,16 +11,17 @@ const ThemeContext = createContext(null);
  * @param {React.ReactNode} props.children
  */
 export function ThemeProvider({ children }) {
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('dark');
 
     // Hydrate from localStorage and apply on mount to avoid flash.
     useEffect(() => {
         try {
-            const saved = localStorage.getItem('tf-theme') ?? 'light';
+            const saved = localStorage.getItem('tf-theme') ?? 'dark';
             startTransition(() => setTheme(saved));
             document.documentElement.setAttribute('data-theme', saved);
         } catch {
-            // localStorage unavailable (private browsing), default to light.
+            // localStorage unavailable (private browsing), default to dark.
+            document.documentElement.setAttribute('data-theme', 'dark');
         }
     }, []);
 
